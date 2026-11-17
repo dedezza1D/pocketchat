@@ -1,5 +1,7 @@
+import numpy as np
 import torch
 
+from pocketchat.data import TokenStream, write_tokens
 from pocketchat.model import GPT, GPTConfig
 from pocketchat.tokenizer import BPETokenizer
 
@@ -47,3 +49,30 @@ def test_model_shapes_loss_and_causality():
     y[:, 10] = (y[:, 10] + 1) % 97
     l2, _ = model(y)
     assert torch.allclose(logits[:, :10], l2[:, :10], atol=1e-5)
+
+
+def test_eval_windows_are_fixed_and_cover_the_file(tmp_path):
+    path = tmp_path / "val.bin"
+    write_tokens(path, np.arange(1000, dtype=np.uint16))
+    stream = TokenStream(path, seq_len=10)
+    assert stream.num_windows == 99
+
+    first = [x.clone() for x, _ in stream.windows(batch_size=8, device="cpu")]
+    second = [x.clone() for x, _ in stream.windows(batch_size=8, device="cpu")]
+    assert all(torch.equal(a, b) for a, b in zip(first, second))
+
+    xs = torch.cat(first)
+    assert xs.shape == (99, 10)
+    assert torch.equal(xs.flatten(), torch.arange(990))  # consecutive, no overlap, no gaps
+    _, y = next(stream.windows(batch_size=1, device="cpu"))
+    assert torch.equal(y[0], torch.arange(1, 11))  # targets are inputs shifted by one
+
+
+def test_training_batches_follow_the_seed(tmp_path):
+    path = tmp_path / "train.bin"
+    write_tokens(path, np.arange(5000, dtype=np.uint16))
+    a, _ = TokenStream(path, 16, seed=7).batch(4, "cpu")
+    b, _ = TokenStream(path, 16, seed=7).batch(4, "cpu")
+    c, _ = TokenStream(path, 16, seed=8).batch(4, "cpu")
+    assert torch.equal(a, b)
+    assert not torch.equal(a, c)

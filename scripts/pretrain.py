@@ -15,28 +15,17 @@ from pathlib import Path
 import torch
 
 from pocketchat.data import TokenStream
+from pocketchat.evaluation import validation_loss
 from pocketchat.model import GPT, GPTConfig
 from pocketchat.tokenizer import BPETokenizer
 
 
-def lr_at(step: int, max_steps: int, warmup: int, peak: float, floor: float) -> float:
+def lr_at(step: int, schedule_steps: int, warmup: int, peak: float, floor: float) -> float:
+    """Linear warmup, cosine decay to `floor` at `schedule_steps`, then constant at `floor`."""
     if step < warmup:
         return peak * (step + 1) / warmup
-    progress = min(1.0, (step - warmup) / max(1, max_steps - warmup))
+    progress = min(1.0, (step - warmup) / max(1, schedule_steps - warmup))
     return floor + 0.5 * (peak - floor) * (1 + math.cos(math.pi * progress))
-
-
-@torch.no_grad()
-def evaluate(model, stream: TokenStream, batches: int, batch_size: int, device: str) -> float:
-    model.eval()
-    losses = []
-    for _ in range(batches):
-        x, y = stream.batch(batch_size, device)
-        with torch.autocast("cuda", dtype=torch.bfloat16, enabled=device.startswith("cuda")):
-            _, loss = model(x, y)
-        losses.append(loss.item())
-    model.train()
-    return sum(losses) / len(losses)
 
 
 def main() -> None:
@@ -55,13 +44,21 @@ def main() -> None:
     ap.add_argument("--min-lr", type=float, default=1e-4)
     ap.add_argument("--warmup", type=int, default=100)
     ap.add_argument("--weight-decay", type=float, default=0.1)
+    ap.add_argument(
+        "--schedule-steps",
+        type=int,
+        default=0,
+        help="length of the warmup + cosine schedule (default: --max-steps). Keep the original value "
+        "when extending a finished run so the learning rate stays at --min-lr instead of rising again.",
+    )
     ap.add_argument("--eval-every", type=int, default=100)
-    ap.add_argument("--eval-batches", type=int, default=20)
+    ap.add_argument("--eval-windows", type=int, default=0, help="fixed validation windows per eval (0 = all)")
     ap.add_argument("--seed", type=int, default=1337)
     ap.add_argument("--resume", action="store_true", help="continue from <out>.last.pt if it exists")
     args = ap.parse_args()
 
     torch.manual_seed(args.seed)
+    schedule_steps = args.schedule_steps or args.max_steps
     device = "cuda" if torch.cuda.is_available() else "cpu"
     torch.backends.cuda.matmul.allow_tf32 = True
 
@@ -76,7 +73,7 @@ def main() -> None:
     model = GPT(cfg).to(device)
     print(f"model: {model.num_params() / 1e6:.1f}M parameters, device={device}")
 
-    train = TokenStream(Path(args.data_dir) / "train.bin", cfg.seq_len)
+    train = TokenStream(Path(args.data_dir) / "train.bin", cfg.seq_len, seed=args.seed)
     val = TokenStream(Path(args.data_dir) / "val.bin", cfg.seq_len)
     tokens_per_step = args.batch_size * args.grad_accum * cfg.seq_len
     print(f"train tokens: {len(train) / 1e6:.1f}M, tokens per step: {tokens_per_step}")
@@ -99,20 +96,24 @@ def main() -> None:
         model.load_state_dict(state["model"])
         opt.load_state_dict(state["optimizer"])
         start_step, best_val, log = state["step"] + 1, state["best_val"], state["log"]
+        if "data_rng" in state:
+            train.rng.bit_generator.state = state["data_rng"]
         print(f"resumed from {last_path} at step {start_step}")
 
     t_last = time.time()
     tokens_since = 0
     for step in range(start_step, args.max_steps):
-        lr = lr_at(step, args.max_steps, args.warmup, args.lr, args.min_lr)
+        lr = lr_at(step, schedule_steps, args.warmup, args.lr, args.min_lr)
         for g in opt.param_groups:
             g["lr"] = lr
 
+        step_loss = torch.zeros((), device=device)
         for _ in range(args.grad_accum):
             x, y = train.batch(args.batch_size, device)
             with torch.autocast("cuda", dtype=torch.bfloat16, enabled=device == "cuda"):
                 _, loss = model(x, y)
             (loss / args.grad_accum).backward()
+            step_loss += loss.detach() / args.grad_accum
         norm = torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
         opt.step()
         opt.zero_grad(set_to_none=True)
@@ -124,18 +125,25 @@ def main() -> None:
             dt = time.time() - t_last
             tps = tokens_since / dt
             t_last, tokens_since = time.time(), 0
-            print(f"step {step:5d} | loss {loss.item():.3f} | lr {lr:.2e} | grad {norm:.2f} | {tps / 1e3:.1f}k tok/s")
+            print(f"step {step:5d} | loss {step_loss.item():.3f} | lr {lr:.2e} | grad {norm:.2f} | {tps / 1e3:.1f}k tok/s")
 
         if (step > 0 and step % args.eval_every == 0) or step == args.max_steps - 1:
-            v = evaluate(model, val, args.eval_batches, args.batch_size, device)
-            log.append({"step": step, "train_loss": loss.item(), "val_loss": v})
+            v = validation_loss(model, val, args.batch_size, device, args.eval_windows)
+            log.append({"step": step, "train_loss": step_loss.item(), "val_loss": v, "lr": lr})
             print(f"  eval: val loss {v:.3f} (perplexity {math.exp(v):.1f})")
             Path(args.out).parent.mkdir(parents=True, exist_ok=True)
             if v < best_val:
                 best_val = v
                 torch.save({"config": cfg.to_dict(), "model": model.state_dict(), "step": step, "val_loss": v}, args.out)
             torch.save(
-                {"model": model.state_dict(), "optimizer": opt.state_dict(), "step": step, "best_val": best_val, "log": log},
+                {
+                    "model": model.state_dict(),
+                    "optimizer": opt.state_dict(),
+                    "step": step,
+                    "best_val": best_val,
+                    "log": log,
+                    "data_rng": train.rng.bit_generator.state,
+                },
                 last_path,
             )
             Path(args.out).with_suffix(".log.json").write_text(json.dumps(log, indent=1))

@@ -45,7 +45,7 @@ def main() -> None:
         run("scripts/tokenize_corpus.py", "--corpus", str(corpus), "--tokenizer", "data/tokenizer_full.json",
             "--out-dir", "data/full")
     run("scripts/pretrain.py", "--data-dir", "data/full", "--tokenizer", "data/tokenizer_full.json",
-        "--max-steps", str(args.max_steps), "--warmup", "300", "--eval-every", "500", "--eval-batches", "40",
+        "--max-steps", str(args.max_steps), "--warmup", "300", "--eval-every", "500",
         "--out", "checkpoints/pretrain.pt", "--resume")
 
 
