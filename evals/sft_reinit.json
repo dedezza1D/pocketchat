@@ -1,0 +1,228 @@
+{
+ "summary": {
+  "name": "sft_reinit",
+  "ckpt": "checkpoints/sft_reinit.pt",
+  "ended": 0.8,
+  "length": 99.16666666666667,
+  "repetition": 0.06725846478391025,
+  "settings": {
+   "temperature": 0.7,
+   "top_p": 0.9,
+   "repetition_penalty": 1.1,
+   "max_new": 200,
+   "seed": 1337
+  }
+ },
+ "answers": [
+  {
+   "question": "What is the water cycle?",
+   "answer": "The water cycle is a process of taking water from one place to another and then converting it to a form of electricity. The main function of the water cycle is to create heat that can be used for cooking, drinking, cooking, cooking, etc.",
+   "ended": true,
+   "length": 51,
+   "repetition": 0.04081632653061229
+  },
+  {
+   "question": "Explain photosynthesis in simple terms.",
+   "answer": "Cat, Lung, and Water are three main components of a simple molecule. They are:\n\n1. Triglycerides: The molecule is a way to bind the molecules together by breaking down nutrients into sugars.\n2. Carbohydrates: The carbon dioxide is a chemical process that converts chemical energy into energy. Carbs are made up of small molecules called sugar molecules, which are made of carbon dioxide. The chemical energy is transmitted through the carbon dioxide in the body.\n3. Metabolic Function: The chemical energy is transferred from the body through the body through the metabolic processes. The metabolic processes involve a chemical process called oxidation.\n4. Total Energy: The total energy is stored as the amount of energy in the body. It is the energy stored in the body as a whole.\n5. Endothelial cells: The endothelial cells are filled with cells that produce oxygen.",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.0505050505050505
+  },
+  {
+   "question": "What is the capital of France?",
+   "answer": "Capital of France is the capital of France.",
+   "ended": true,
+   "length": 11,
+   "repetition": 0.0
+  },
+  {
+   "question": "Give me three tips to sleep better.",
+   "answer": "Sleep is the process of moving and acting on your body. When you are awake, you are not alone. You are not alone. If you are awake, you may be able to stay awake for longer than when you are awaking. \n\nPractice your breathing: Eat a balanced diet, exercise, sleep, and sleep. This will help you stay focused and focused.\n\nUse an alarm: Eating a balanced diet can help you stay focused and focus. Keep in mind that it's important to eat an alarm to keep your mind engaged and focus.",
+   "ended": true,
+   "length": 125,
+   "repetition": 0.11382113821138207
+  },
+  {
+   "question": "What is a black hole?",
+   "answer": "A black hole is a mass that can travel 1/2 to 1/2 inch (1/2 to 1/2) to form the nucleus. It can be divided into two quarks, the order of these quarks is called the \"runner's\" and the velocity is called the center of gravity.",
+   "ended": true,
+   "length": 74,
+   "repetition": 0.125
+  },
+  {
+   "question": "How do vaccines work?",
+   "answer": "Consuming vaccines is the most important thing. It involves the injection of your immune system into a person's body and then using a medication to prevent the disease. It can also help you stay healthy and prevent the spread of disease.",
+   "ended": true,
+   "length": 50,
+   "repetition": 0.0
+  },
+  {
+   "question": "Write a short poem about the ocean.",
+   "answer": "I thought I could get the advice, but it was just a dream.",
+   "ended": true,
+   "length": 15,
+   "repetition": 0.0
+  },
+  {
+   "question": "What is the difference between weather and climate?",
+   "answer": "Certainly! Climate is a fundamental factor in our understanding of weather and climate, but there are many factors that contribute to our understanding of climate. The main factors include:\n\n- Higher temperatures: The higher the temperature the more it's likely to be. The less heat it's being emitted, the less we know what it's being. This could have significant consequences for people who are experiencing extreme weather events.\n\n- Increased exposure to high levels of CO2: The higher the level of CO2, the greater the amount of CO2 in the atmosphere. This can make it difficult for people to reach the ground or control their temperatures.\n\n- Solar-powered: The more solar-powered the better, the more heat they are. The lower the energy efficiency, the more likely they will be able to use more power, and the more likely they will be able to use more of the electricity they need.\n\n- Increased exposure to",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.11616161616161613
+  },
+  {
+   "question": "Why is the sky blue?",
+   "answer": "The sky blue is blue because of the color green.",
+   "ended": true,
+   "length": 11,
+   "repetition": 0.0
+  },
+  {
+   "question": "How can I improve my writing skills?",
+   "answer": "Consider using a library that provides a variety of writing style and grammar, grammar, and punctuation. The main objective of improving your writing is to create a clear and concise writing style that everyone can enjoy. Finally, you can use a variety of styles to create a more concise and detailed writing experience.",
+   "ended": true,
+   "length": 68,
+   "repetition": 0.045454545454545414
+  },
+  {
+   "question": "What causes earthquakes?",
+   "answer": "C earthquakes can be caused by a combination of factors such as earthquakes, droughts, and human activities.  These factors include: earthquakes, earthquakes, heat waves, and other sources of energy.",
+   "ended": true,
+   "length": 44,
+   "repetition": 0.04761904761904767
+  },
+  {
+   "question": "Summarize the benefits of regular exercise.",
+   "answer": "Consuming regular exercise is important for overall health, fitness and well-being. It is recommended that you follow a regular exercise routine as a beginner. However, it is important to keep a close eye on your body for any signs of injury or illness.",
+   "ended": true,
+   "length": 54,
+   "repetition": 0.0
+  },
+  {
+   "question": "What is machine learning?",
+   "answer": "Machine learning is the process of learning a machine, for example.  It is used to provide a high-level understanding of the language and structure of language.  This involves integrating data from a computer to make predictions about how many languages are being trained on each machine, and then processing the data in a way that can be improved with the help of machine learning models.",
+   "ended": true,
+   "length": 77,
+   "repetition": 0.0
+  },
+  {
+   "question": "How does a computer store information?",
+   "answer": "A computer store information is the information that is stored on a computer.  The information is stored in a form called a computer, which stores information about the operating system, the software that stores it, and the programming language used to perform tasks.  It is a secure and secure way to store and manage data.  A computer can be written as a process of transferring, transmitting, and retrieving data into memory, using a computer keyboard or a digital key.  A computer can be accessed by the computer, which allows for access to the computers and other devices that are connected to them.  The computer can then store and use the computer data, as well as its network, and store and process data.",
+   "ended": true,
+   "length": 149,
+   "repetition": 0.04081632653061229
+  },
+  {
+   "question": "What should I pack for a trip to the mountains?",
+   "answer": "Check the weather, air, or any other object for a trip to the mountains.  You can do this by baking, slicing, or cooking.  It will also make you stay in the mountains with the wind.  You can also use scented rocks to make a picnic and shooter.",
+   "ended": true,
+   "length": 68,
+   "repetition": 0.030303030303030276
+  },
+  {
+   "question": "Explain what inflation is.",
+   "answer": "Economic growth is the central theme of modern economics.  Economists consider inflation to be a form of money transfers that are distributed over the United States, which creates inflation, and the inflation is the basis for inflation.\n\nIn short, inflation is a centralization of economic activity.  In theory, inflation is the production or distribution of goods and services, but it is not exhaustive.  In the United States, inflation is the primary source of inflation and the rate at which inflation is produced.  In the United States, inflation is the primary source of inflation, and in the United States, inflation is the primary source of inflation.",
+   "ended": true,
+   "length": 147,
+   "repetition": 0.26206896551724135
+  },
+  {
+   "question": "What are the planets in the solar system?",
+   "answer": "The planet Mars is a superposition of light in our solar system. The planets are on the icy side of our solar system, and are made up of a variety of gamma rays, each with its own unique properties. The planet's orbit around the sun is called the \"solar system\" or \"colder\" because it has enough energy to orbit the Sun.",
+   "ended": true,
+   "length": 80,
+   "repetition": 0.012820512820512775
+  },
+  {
+   "question": "How do I make a cup of tea?",
+   "answer": "Caking your tea is a popular and enjoyable way to add flavor and texture to the tea. The best way to make a cup of tea is by mixing it into bags of starch, cheese, and black pepper. For a cup of tea, you can add the following items: cooked eggs, salt, and a sparkling, with olive oil and a layer of creamy white oils. Once you have the olive oil and a bubble of sweetening, add the following items:\n\n* In a cup of coffee, make sure the mixture is warm enough to be able to taste and texture.\n* Tie the tea with a softened stick, with a baking soda, on top of the tea, and a small amount of creamy white oils.\n* In a cup of tea, bake for at least 3 minutes at a time, adding the following ingredients to",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.10606060606060608
+  },
+  {
+   "question": "What is democracy?",
+   "answer": "Conservative political systems are the law of motion, i.e. the rule of law.  The rule of law is the principle that all members of the society should be free from harmful interference and manipulation by the citizens of the country.  Some examples of democracy are the European Parliament, the European Parliament, and the US Constitution.",
+   "ended": true,
+   "length": 70,
+   "repetition": 0.044117647058823484
+  },
+  {
+   "question": "Give me a few ideas for a birthday party.",
+   "answer": "Here are some ideas for a birthday party:\n1. Movie and social media: You can create a birthday party that is shared by the group members, and also use your favorite time to stay connected to your family. This way you can meet new people and share your favorite time.\n2. Plan a party: You can plan a party with your family, such as dinner at the end of your week, or spend a few days together. Make sure you have a list of items you want to keep in the party.\n3. Breakfast: Breakfast can be a great way to eat a meal, so it's important to eat breakfast regularly.\n4. Promptuary: Make sure your dinner is free from unnecessary distractions and other distractions. This means that you'll have fun, such as dinner and baking.\n5. Have a spin in the room: Show your sp",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.0505050505050505
+  },
+  {
+   "question": "Why do leaves change color in autumn?",
+   "answer": "When the leaves change color, they will eventually change color. This happens when the leaves turn yellow. When the leaves turn yellow, they start to see yellow, which is a good sign of lighting and temperature.",
+   "ended": true,
+   "length": 43,
+   "repetition": 0.04878048780487809
+  },
+  {
+   "question": "What is the role of the heart in the human body?",
+   "answer": "The human heart is a key part of life.  It has a complex and complex role to play in our daily lives.  The heart's structure is important for the functioning of our body, including the functions of our cardiovascular system.  It is a key aspect of our overall health and wellness.  It is also an essential part of any diet.  This includes foods that are high in fat and sugar, as well as fruits and vegetables.",
+   "ended": true,
+   "length": 93,
+   "repetition": 0.04395604395604391
+  },
+  {
+   "question": "How do bees make honey?",
+   "answer": "Consider the following: honey bees are pollinators of the flowers, which they are a type of pollinator that is commonly found in flowers. These pollinators can be used for insects, to control their pollination. Bees use a variety of pollinators that absorb pollinators from the flower, such as the flower sphagnum, which can be used for a variety of purposes.",
+   "ended": true,
+   "length": 87,
+   "repetition": 0.08235294117647063
+  },
+  {
+   "question": "What is a good way to learn a new language?",
+   "answer": "A good way to learn a new language is to start with a word and make it easier to understand.  The more you learn, the better you will be in the future.  You will also want to learn a new language like English or Japanese.  Some good ways to learn a new language include:\n\n1. Maintain a clear understanding of your target language, such as your own language, communication skills, etc.\n2. Learn a new language.  It's important to learn a new language when you have the right knowledge and know-how.  In this way, you can learn a new language by learning a new language.\n3. Practice a new language.  As you learn a new language, you can practice it with some new language.  By doing so, you can learn a new language that will allow you to learn a new language.\n4. Use a new language.  It is best to use the language that you are learning with your native language",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.1717171717171717
+  },
+  {
+   "question": "Explain the difference between a virus and bacteria.",
+   "answer": "A virus is a bacteria that is genetically modified, and can be transferred to another host or environment. The virus has many different characteristics, but its most common type is the bite of a person, such as their ability to chew, swallow, and smell. Having two viruses together can make it harder for humans to get infected.",
+   "ended": true,
+   "length": 74,
+   "repetition": 0.0
+  },
+  {
+   "question": "What is renewable energy?",
+   "answer": "Eco-friendly, renewable energy is the most energy-efficient and energy-efficient source of renewable energy.",
+   "ended": true,
+   "length": 23,
+   "repetition": 0.04761904761904767
+  },
+  {
+   "question": "How does the internet work?",
+   "answer": "The internet is the only modern internet, and it's a very popular and very versatile internet.  The internet has a lot of resources, but it's also a good choice for those who want to learn more about the internet.\n\nThere are many online platforms that offer great information and advice, but they're not limited to internet users. They're designed to be useful for anyone looking to get a sense of a specific person's place in a world that they're interested in.",
+   "ended": true,
+   "length": 99,
+   "repetition": 0.0
+  },
+  {
+   "question": "What were the main causes of World War I?",
+   "answer": "The main causes of World War I were:\n\n1. Inactivity and trauma:    The sudden death of the Soviet Union was caused by the massive impact of the Soviet invasion of Afghanistan.\n2. Compression anxiety:    The lack of understanding of the political situation created the conflict and the resentment of the Soviet government, leading to more people being killed and injuries.\n3. Obstructive sleep deprivation:    The lack of understanding of the environment led to the rise in popularity of the war and the possibility of a global peacefulization of the world.\n4. Headaches:    The lack of knowledge of the causes of the collapse of the Soviet Union led to increased internet usage and the spread of the word of the country.",
+   "ended": true,
+   "length": 168,
+   "repetition": 0.12048192771084343
+  },
+  {
+   "question": "Recommend a healthy breakfast.",
+   "answer": "Celebrate your breakfast and take a break. \n\nRemember, it's important to eat plenty of vegetables and fruits, and avoid coffee, soda, tea and other caffeine-based foods like coffee, tea or yogurt. \n\nMake a healthy breakfast. \n\nFoods and meats. \n\nFoods and meats are great sources of protein and a good source of protein.",
+   "ended": true,
+   "length": 94,
+   "repetition": 0.10869565217391308
+  },
+  {
+   "question": "What is the Pythagorean theorem?",
+   "answer": "The Pythagorean theorem is a mathematical problem that attempts to explain the existence of a form of religious knowledge, which is an important aspect of the scientific understanding of the universe. The goal of the Pythagorean theorem is to understand the nature of matter and the behavior of matter. The goal of the Pythagorean theorem is to understand the nature of matter and the behavior of matter and the behavior of matter. This goal can be used to develop a knowledge-based understanding of the nature of matter and the behavior of matter in the real world.\n\nIn summary, the Pythagorean theorem is a mathematician who plays a major role in developing the theorem of the nature of matter and the behavior of matter. He has been a strong contributor to the field of physics, medicine, and mathematics, as well as a keen observer for over 30 years. He is currently a significant contributor to the",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.30808080808080807
+  }
+ ]
+}

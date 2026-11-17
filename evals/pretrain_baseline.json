@@ -1,0 +1,228 @@
+{
+ "summary": {
+  "name": "pretrain_baseline",
+  "ckpt": "checkpoints/pretrain_final.pt",
+  "ended": 0.0,
+  "length": 200.0,
+  "repetition": 0.6587542087542088,
+  "settings": {
+   "temperature": 0.7,
+   "top_p": 0.9,
+   "repetition_penalty": 1.1,
+   "max_new": 200,
+   "seed": 1337
+  }
+ },
+ "answers": [
+  {
+   "question": "What is the water cycle?",
+   "answer": "://www.apa.org/water cycle?ween?do?breaking of water cycle 1\u201310544444437\n- Deep water cycle 2\u201320544444444444444444444444444444444444444444444444444444444444444444444444444444444444444444634544444474444344447445044473\n- Deep water cycle 2\u20132054444474444444544494444744446",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.7070707070707071
+  },
+  {
+   "question": "Explain photosynthesis in simple terms.",
+   "answer": "\ufffdeper.comctsq=1&eq=1&eq=2&eq=1&eq=2&eq=3&eq=1&eq=2&eq=1&eq=2&eq=3&eq=2&eq=1&eq=1&eq=2&eq=1&eq=2&eq=1&eq=3&eq=2&eq=3&eq=1&eq=1&eq=1&eq=1&eq=1&eq=1&eq=1&eq=2&eq=2&eq=1&eq=2&eq=1&eq=1&eq=2&eq=1&eq=1&eq=1&eq=1&e",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.9191919191919192
+  },
+  {
+   "question": "What is the capital of France?",
+   "answer": "://www.collections.net/switch-hawking-steiner-cyberskiwomen-ethening-phenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenaconomenal perceptions in women, as a cause of a woman and menopause is not as prevalent as that of the women's rights to sexual",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.6818181818181819
+  },
+  {
+   "question": "Give me three tips to sleep better.",
+   "answer": "://www.biomechanics.com/.\n1. Valve the throat; https://www.nhcbi.nih.gov/cms/khzm/pdf/how-to-help-a-choice-might-all-top-throat-proposal.html#full_top\n2. Solving the throat: https://www.stroplatetherapy.com/?d=0\n3. Solving the throat: https://www.stroplatetherapy.com/?d=4<|endoftext|>|History of Yellow Heights\n|Size: 1 to 5 feet|\n|Length: 10 to 20 m|\nThe zodiac is a linear structure with two sides, each one having an axis. The axis is a linear structure with a characteristic and a dimension. The axis is the length of a linear plane. It",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.15656565656565657
+  },
+  {
+   "question": "What is a black hole?",
+   "answer": "acifice,ictionary.net\n1.--google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google.com --google",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.9292929292929293
+  },
+  {
+   "question": "How do vaccines work?",
+   "answer": "acifice, 2nd ed. 2001. Does augmentedient approach to vaccines work?AbstractThematic Reviews of the American Academy of Pediatrics (AAP) and the American Academy of Pediatrics (AAP). (Part III). Retrieved from https://www.apd.org/abstractThematic reviews of the AAP are provided by the ACE Clinical Institute of Pediatrics (AAP) and the AAP are available for reproduction. All authors and their submitted copies are available in a formally published form. All authors and the AAP are available as references, unless otherwise stated.\n- United States of America\n- The United States of America\n- World Health Organization\n- United States of America\n- World Health Organization\n- United States of America\n- United States of America<|endoftext|>Family: Leaf: Leaf: Aphids\nLarge or",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.2676767676767676
+  },
+  {
+   "question": "Write a short poem about the ocean.",
+   "answer": "acifice,About 1800, constutes a globe of the ocean, over and above.From The Sea to Ocean,From The Sea to Ocean,From The Sea to Sea to The Ocean,From The Sea to the Sea,From The Sea to Sea, From The Sea to the Sea,from The Sea to Sea, from The Sea to Sea to Sea,from The Sea to Sea,From The Sea to Sea,from The Sea to Sea, from The Sea to Sea, from Anaphora, from The Sea to Sea, from The Sea to Sea, from The Sea to Sea, from The Sea to Sea, from The Sea to Sea, from Auburn, from The Sea to Sea, from The Sea to Sea, from The Sea to Sea, from The Sea to Sea, from The Sea to Sea, from The Sea to Sea, from Auburn, from Auburn, from The Sea to Sea, from The Sea to Sea, from",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.7121212121212122
+  },
+  {
+   "question": "What is the difference between weather and climate?",
+   "answer": "://www.ghchat.net/eiginawa.htm#stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=stat=",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.898989898989899
+  },
+  {
+   "question": "Why is the sky blue?",
+   "answer": "acifice, the sky blue is the sky blue in all its forms and color, as well as the sky blue in all its forms.The sky blue is the sky blue in all its form and color, as well as the sky blue in all its forms and color.This is the sky blue in all its forms.The sky blue is the sky blue in all its forms.This is the sky blue in all its forms and color, as well as the sky blue.The sky blue is the sky blue in all its forms.It is the sky blue in all its forms and color, as well as the sky blue in all its forms.In all its forms there are no stars or colors.The sky blue is the sky blue in all its forms.The sky blue is the sky blue in all its forms and color.It is the sky blue in all its forms.His name is Hymn.Holy:Holy:Holy:Holy:Holy",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.6919191919191919
+  },
+  {
+   "question": "How can I improve my writing skills?",
+   "answer": "acifice, 2nd edition, 3rd edition, 5th edition, 6th edition, 7th edition, 8th edition, 9th edition, 10th edition, 12th edition, 11th edition, 12th edition, 13th edition, 14th edition, 15th edition, 18th edition, 18th edition, 20th edition, 21st edition, 22nd edition, 23rd edition, 25th edition, 26th edition, 27th edition, 29th edition, 28th edition, 31st edition, 35th edition, 29th edition, 29th edition, 31st edition, 36th edition, 41st edition, 45th edition, 4th edition, 19th edition, 20th edition, 8th edition, 9th edition, 21st edition, 6",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.5101010101010102
+  },
+  {
+   "question": "What causes earthquakes?",
+   "answer": "\ufffdomenoveidence.nichror?hor=thereby.word=thereby.word=thereby.word=thereby.word=thereby.word=thereby.word=thereby.word=thereby.word=thereby.word=thereby.word=thereby.word=thereby.word=thereby.word=thereby.word=thereby.word=thereby.word=thereby.word=thereby.word=thereby.word=thereby.word=thereby.word=thereby.word=thereby.word=thereby.word=thereby.word=thereby.word=thereby.word=thereby.word=thereby.word=thereby.word=thereby.word=thereby.",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.9242424242424242
+  },
+  {
+   "question": "Summarize the benefits of regular exercise.",
+   "answer": "\ufffdeediediediediediediediediediediediediediediediediediediediediediediediediediediediediediediediate.-being.comesaboutthesemigratingtheworldmarry.ulfatsmaat (two-thirds of the 405.96% of the 205.86%)=thereforethrowtheworldmarry.ulfatsmaat (two-thirds of the 205.87% of the 205.97% of the 205.87% of the 205.63% of the 205.87% of the 205.87% of the 205.87% of the 205.87% of the 205.74% of the 205.87% of the 205.87% of the",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.6565656565656566
+  },
+  {
+   "question": "What is machine learning?",
+   "answer": "://www.youtube.com/watch?horizo.swt.nih.gov/presser-choices?hors-through-kill-through-kill-through-kill-through-in-mill-through-kill-through-kill-through-kill-through-kill-through-the-kill-through-kill-through-kill-through-kill-through-kill-through-through-kill-through-kill-through-kill-through-kill-through-in-mill-through-kill-through-through-through-kill-through-kill-through-through-through-through-kill-through-through-through-through-through-through-through-through-through-through-through-through-through-through-through-through-through-through-through-in-mill-throughput-the-kill-th",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.7727272727272727
+  },
+  {
+   "question": "How does a computer store information?",
+   "answer": "\u0735ober2012, 1:e1-4) and=0\nHow to use a computer store information?//http://www.hotmail.com/how-to-help-users-marine_colorsmode?rt=1&wid=0\nHow to use a computer store information?//http://www.hotmail.com/how-to-help-help-plug-in-the-tech-for-genre-world-webpage?////http://www.hotmail.com/how-to-help-help-plug-in-the-tech-for-genre-world-webpage?#pdf+research\nHow to use an Internet store information?//http://www.cloudcatlaw.org/en/?service/eurek.html\nWhy",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.38888888888888884
+  },
+  {
+   "question": "What should I pack for a trip to the mountains?",
+   "answer": "acific.gami?bol-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna.Thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna, the hallucinula-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-thuna-th",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.898989898989899
+  },
+  {
+   "question": "Explain what inflation is.",
+   "answer": "acificomencystecuth is the law of evolutionary cytology.weenween between 1\u20131054,00000:00.04208:00.115522712:00.213843:00.215522712:00.213843:00.313845:00.214944:00.215523:00.213845:00.313845:00.213845:00.213845:00.214845:00.213845:00.21485:00.213845:00.313845:00.214856:00.213845:00.213845:00.214845:00.213845:00.213845:00.213845:00",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.6363636363636364
+  },
+  {
+   "question": "What are the planets in the solar system?",
+   "answer": "acifice,stituters.nih.gov.\n1.4.5.0.0.1.1.1.2.2.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.8686868686868687
+  },
+  {
+   "question": "How do I make a cup of tea?",
+   "answer": "acifice, if I make a cup of tea,stituto-unicorn, 1/8\u2032?line,make a cup of tea.eksitematics, you\u2019ll find the teas in many different types.\nThe teas are naturally sweet and contain more than 40 percent of the recommended amount of the essential vitamins. This means that your body can synthesize the essential vitamins, minerals, and other nutrients needed for normal growth, healing, and the optimal development of your baby. There are also some fruits and vegetables that are rich in fiber and antioxidants, which can help with the development of cancer.\nJust because it\u2019s okay to make a small snack, don\u2019t eat enough to ripen the tip of the glasses or the fruit. The benefits of junk food are well known.<|endoftext|>For many years this has been one of the most devastating consequences of rising water consumption.",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.02020202020202022
+  },
+  {
+   "question": "What is democracy?",
+   "answer": "://www.psychologicalreport.com/migration-activities/statistics>\n10. 2010.10.1007.1280.1.2011.10.1007.1380.2.2011.10.1007.1280.3.2011.10.1016.00600.2011.10.1016.00600.2011.10.1016.00600.2011.10.1016.00600.2011.10.1016.0.3.2011.10.1016.00600.2011.10.1016.00600.2011.10.1016.00600.2011.10.1016.00600.2011.10.1016.00600.2011.10.1016.00600.201",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.696969696969697
+  },
+  {
+   "question": "Give me a few ideas for a birthday party.",
+   "answer": "acific.gami is a birthday party that ends on a coup day and doesn\u2019t end on a coup day.\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd\ud83d\udc69\ufffd",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.8636363636363636
+  },
+  {
+   "question": "Why do leaves change color in autumn?",
+   "answer": "\u0735oberIstitutut, 2001.\u0735\ufffd\ufffdwo-erichthoned-choice.wordpress.com, Pages: 283\nIssues of the Taxonomy that Beethoven Hemings (Print) and Bernard V. Motorius (Engineers) have argued that the most common reason for this is a direct link between the relative amount of energy in the earth\u2019s crust and the speed at which the sun can absorb energy. However, this is not a clear and often misinterpretable fact. The answer to this question is not to find the least energy in the earth\u2019s crust, but to find the most energy in the crust by studying the amount of energy in the crust. Because it was written out in the 1960s, many of us are aware that the planet has been spinning from the crust and its crust",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.07070707070707072
+  },
+  {
+   "question": "What is the role of the heart in the human body?",
+   "answer": "://www.ymbolghost.com/swighoriberword.html#statistemancity.com/swighoriberword.htm#statistemancity.com/swighoriberword.htm#statistemancity.com/swighoriberword.htm#statistemancity.com/swighoriberword.htm#statistemancity.com/swighoriberword.htm#statistemancity.com/swighoriberword.htm#statistemancity.com/swighoriberword.htm#statistemancity.com/swighoriberword.htm#statistemancity.com/swighoriberword.htm#statistemancity.com/swighoriberword.htm#statistemancity.com/swighoriberword.htm#statistemancity.com",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.8686868686868687
+  },
+  {
+   "question": "How do bees make honey?",
+   "answer": "acifice, n.d., 2014.\n- Bees produce honey, n.d., 2015.\n- Bees produce honey, n.d., 2013.\n- Bees produce honey, n.d., 2014.\n- Bees produce honey, n.d., 2014.\n- Bees produce honey, n.d., 2014.\n- Bees produce honey, n.d., 2014.\n- Bees produce honey, n.d., 2013.\n- Bees produce honey, n.d., 2014.\n- Bees produce honey, n.d., 2015.\n- Bees produce honey, n.d., 2015.\n- Bees produce honey, n.d., 2015.\n- Bees produce honey, n.d., 2015.\n- Bees produce honey, n.d., 2014.\n- Bees produce honey, n",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.8888888888888888
+  },
+  {
+   "question": "What is a good way to learn a new language?",
+   "answer": "acificejournal.com, 1stpril2010.word@example.com, 2nd July 2010.word@example.com, 3rd July 2010.word@example.com, 5th June 2010.word@example.com, 6th July 2010.word@example.com, 6th August 2010.word@example.com, 7th August 2010.word@example.com, 8th September 2010.word@example.com, 8th September 2010.word@example.com, 9th September 2010.word@example.com, 11th October 2010.word@example.com, 7th September 2010.word@example.com, 8th September 2010.word@example.com, 10th December 2010.word@example.com, 12th September 2010.word@example.com, 8th March 2010.word@example.com, 8th",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.6717171717171717
+  },
+  {
+   "question": "Explain the difference between a virus and bacteria.",
+   "answer": "acificejournal.com/patient/patient/patient/patient/patient/patient/patient/patient/patient.asp?#p=multiply by=https://www.pciap.org/publicat/patient/patient/patient/patient/patient/patient/patient/patient/patient_patient/patient.asp?#p=multiply by=https://www.pciap.org/publicat/patient/patient/patient/patient/patient/patient/patient/patient/patient/patient/patient/patient/patient/patient/patient/patient/patient/patient/patient.asp?#p=multiply by=https://patient.patient/patient/patient/patient/",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.7929292929292929
+  },
+  {
+   "question": "What is renewable energy?",
+   "answer": "://www.preternation.org.au/government/ucuvernation-ucuvernation-proof-climate?ween-state?stitutes=is_us_the_gap_the_gap_the_gap_the_gap_the_gap_the_gap_the_gap_the_gap_the_gap_the_gap_the_gap_the_gap_the_gap_the_gap_the_gap_the_gap_the_gap_the_gap_the_gap_the_gap_the_gap_the_gap_the_gap_the_gap_the_gap_the_gap_the_gap_the_gap_the_gap_the_gap_the_gap_the_gap_",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.7878787878787878
+  },
+  {
+   "question": "How does the internet work?",
+   "answer": "acifice, 2011.1.2.1.2.3, p. 1\u201310.\nFor more information about: https://www.the-poppost.com/the-education-inflation-mobs-hypersymmy-to-the-age-journal/2011/12/04/mobs-hypersymmy-to-the-series-life-and-for-bees-all-journal/?vi?cy=com&t=em?id=1&f=&s=metrethis.html#\nFor more information about: https://www.the-poppost.com/the-education-inflation-mobs-hypersymmy-to-the-early-journal/?vi?cy=com&t=em?id=3&f=&s=mobs-hypersymmy-to-the-series",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.3787878787878788
+  },
+  {
+   "question": "What were the main causes of World War I?",
+   "answer": "omenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomenomeninghammar women are considered to be the most common causes of war in Europe. Women who have been compared to women who have experienced war during the war may be at risk for war.\nTheir findings are not known because of the disinformation they make, but it is the opposite of war. They do not indicate that warfare is a major problem and that warfare is not necessarily a serious problem. The differences between warfare and warfare are not well understood.\nWarfare is usually the result of a war which is very unlikely to have any effect on warfare. Wars are typically characterized by warring of warfare and a combination of these forces. For example, warfare is often associated with",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.2727272727272727
+  },
+  {
+   "question": "Recommend a healthy breakfast.",
+   "answer": "\ufffdeper.com.Dontain a healthy breakfast.\u0715eper.com.Dontain a healthy breakfast.\ud83d\udc7a\ud83d\ude3a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ud83d\udc7a\ufffd",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.8838383838383839
+  },
+  {
+   "question": "What is the Pythagorean theorem?",
+   "answer": "://www.ymbolie.com?-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein-thatstein",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.9444444444444444
+  }
+ ]
+}

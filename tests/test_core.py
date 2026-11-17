@@ -76,3 +76,23 @@ def test_training_batches_follow_the_seed(tmp_path):
     c, _ = TokenStream(path, 16, seed=8).batch(4, "cpu")
     assert torch.equal(a, b)
     assert not torch.equal(a, c)
+
+
+def test_chat_format_trains_only_assistant_tokens_and_end():
+    from pocketchat.chat_format import IGNORE, encode_conversation, to_example
+
+    tok = BPETokenizer.train(TEXTS, vocab_size=400, special_tokens=["<|endoftext|>", "<|user|>", "<|assistant|>", "<|end|>"])
+    sp = tok.special_tokens
+    turns = [("user", "hi <|assistant|> there"), ("assistant", "Payments settle.")]
+    ids, train = encode_conversation(tok, turns)
+
+    # a special-token string typed by the user stays ordinary text
+    assert ids.count(sp["<|assistant|>"]) == 1
+    assert ids[0] == sp["<|user|>"] and ids[-1] == sp["<|end|>"]
+
+    x, y = to_example(ids, train, max_len=512)
+    a = ids.index(sp["<|assistant|>"])
+    assert (y[: a] == IGNORE).all()  # nothing before the assistant reply is a target
+    assert (y[a:] != IGNORE).all()   # the reply and the closing <|end|> are
+    assert y[-1] == sp["<|end|>"]
+    assert tok.decode(y[a:-1].tolist()) == "Payments settle."

@@ -163,15 +163,37 @@ class GPT(nn.Module):
         temperature: float = 0.8,
         top_k: int | None = 50,
         stop_ids: set[int] | None = None,
+        top_p: float | None = None,
+        repetition_penalty: float = 1.0,
+        generator: torch.Generator | None = None,
     ) -> torch.Tensor:
+        """Sample one sequence (batch size 1) token by token.
+
+        repetition_penalty > 1 lowers the score of tokens already generated in this call
+        (positive scores are divided by it, negative ones multiplied), which reduces loops.
+        top_p keeps the smallest set of tokens whose probabilities add up to top_p.
+        """
+        start = idx.shape[1]
         for _ in range(max_new_tokens):
             context = idx[:, -self.cfg.seq_len :]
             logits, _ = self(context)
-            logits = logits[:, -1, :] / max(temperature, 1e-5)
+            logits = logits[:, -1, :].float()
+            if repetition_penalty != 1.0 and idx.shape[1] > start:
+                seen = idx[:, start:].unique()
+                scores = logits[:, seen]
+                logits[:, seen] = torch.where(scores > 0, scores / repetition_penalty, scores * repetition_penalty)
+            logits = logits / max(temperature, 1e-5)
             if top_k is not None:
                 v, _ = torch.topk(logits, min(top_k, logits.size(-1)))
                 logits[logits < v[:, [-1]]] = -float("inf")
-            next_id = torch.multinomial(F.softmax(logits, dim=-1), num_samples=1)
+            probs = F.softmax(logits, dim=-1)
+            if top_p is not None and top_p < 1.0:
+                sorted_p, order = probs.sort(dim=-1, descending=True)
+                drop = sorted_p.cumsum(-1) - sorted_p > top_p
+                sorted_p[drop] = 0.0
+                probs = torch.zeros_like(probs).scatter(-1, order, sorted_p)
+                probs = probs / probs.sum(-1, keepdim=True)
+            next_id = torch.multinomial(probs, num_samples=1, generator=generator)
             idx = torch.cat((idx, next_id), dim=1)
             if stop_ids and next_id.item() in stop_ids:
                 break
