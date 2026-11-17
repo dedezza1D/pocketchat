@@ -59,6 +59,10 @@ uv run python scripts/eval_chat.py --ckpt checkpoints/sft_reinit.pt --name sft_r
 uv run python scripts/chat.py --ckpt checkpoints/sft_reinit.pt
 ```
 
+## License
+
+The code is released under the [MIT License](LICENSE). The datasets keep their own licenses, listed below.
+
 ## Data licenses
 
 FineWeb-Edu is released under ODC-By. oasst1 is Apache-2.0. databricks-dolly-15k is CC BY-SA 3.0 (attribution: Databricks). No outputs of commercial models were used for training.
