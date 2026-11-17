@@ -40,16 +40,22 @@ def main() -> None:
     ap.add_argument("--workers", type=int, default=max(1, (os.cpu_count() or 2) - 2))
     args = ap.parse_args()
 
-    lines = Path(args.corpus).read_text(encoding="utf-8").splitlines()
-    n_val = max(1, int(len(lines) * args.val_fraction))
-    splits = {"val": lines[:n_val], "train": lines[n_val:]}
+    with Path(args.corpus).open(encoding="utf-8") as f:
+        n_docs = sum(1 for _ in f)
+    n_val = max(1, int(n_docs * args.val_fraction))
 
+    def lines():
+        with Path(args.corpus).open(encoding="utf-8") as f:
+            yield from f
+
+    out = {"val": [], "train": []}
     with Pool(args.workers, initializer=_init, initargs=(args.tokenizer,)) as pool:
-        for name, docs in splits.items():
-            arrays = list(tqdm(pool.imap(_encode, docs, chunksize=64), total=len(docs), desc=name))
-            ids = np.concatenate(arrays)
-            write_tokens(Path(args.out_dir) / f"{name}.bin", ids)
-            print(f"{name}: {len(docs)} docs, {len(ids) / 1e6:.2f}M tokens")
+        for i, arr in enumerate(tqdm(pool.imap(_encode, lines(), chunksize=64), total=n_docs, unit="doc")):
+            out["val" if i < n_val else "train"].append(arr)
+    for name, arrays in out.items():
+        ids = np.concatenate(arrays)
+        write_tokens(Path(args.out_dir) / f"{name}.bin", ids)
+        print(f"{name}: {len(arrays)} docs, {len(ids) / 1e6:.2f}M tokens")
 
 
 if __name__ == "__main__":

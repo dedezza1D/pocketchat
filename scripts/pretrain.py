@@ -58,6 +58,7 @@ def main() -> None:
     ap.add_argument("--eval-every", type=int, default=100)
     ap.add_argument("--eval-batches", type=int, default=20)
     ap.add_argument("--seed", type=int, default=1337)
+    ap.add_argument("--resume", action="store_true", help="continue from <out>.last.pt if it exists")
     args = ap.parse_args()
 
     torch.manual_seed(args.seed)
@@ -91,9 +92,18 @@ def main() -> None:
 
     log = []
     best_val = float("inf")
+    start_step = 0
+    last_path = Path(args.out).with_suffix(".last.pt")
+    if args.resume and last_path.exists():
+        state = torch.load(last_path, map_location=device)
+        model.load_state_dict(state["model"])
+        opt.load_state_dict(state["optimizer"])
+        start_step, best_val, log = state["step"] + 1, state["best_val"], state["log"]
+        print(f"resumed from {last_path} at step {start_step}")
+
     t_last = time.time()
     tokens_since = 0
-    for step in range(args.max_steps):
+    for step in range(start_step, args.max_steps):
         lr = lr_at(step, args.max_steps, args.warmup, args.lr, args.min_lr)
         for g in opt.param_groups:
             g["lr"] = lr
@@ -120,10 +130,15 @@ def main() -> None:
             v = evaluate(model, val, args.eval_batches, args.batch_size, device)
             log.append({"step": step, "train_loss": loss.item(), "val_loss": v})
             print(f"  eval: val loss {v:.3f} (perplexity {math.exp(v):.1f})")
+            Path(args.out).parent.mkdir(parents=True, exist_ok=True)
             if v < best_val:
                 best_val = v
-                Path(args.out).parent.mkdir(parents=True, exist_ok=True)
                 torch.save({"config": cfg.to_dict(), "model": model.state_dict(), "step": step, "val_loss": v}, args.out)
+            torch.save(
+                {"model": model.state_dict(), "optimizer": opt.state_dict(), "step": step, "best_val": best_val, "log": log},
+                last_path,
+            )
+            Path(args.out).with_suffix(".log.json").write_text(json.dumps(log, indent=1))
 
     Path(args.out).with_suffix(".log.json").write_text(json.dumps(log, indent=1))
     if device == "cuda":
