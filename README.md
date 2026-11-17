@@ -1,5 +1,9 @@
 # pocketchat
 
+<p align="center">
+  <img src="assets/pocketchat.png" alt="pocketchat — a mini ChatGPT built and trained from scratch on a laptop GPU: 29.9M parameters, 491M tokens, about 4 hours on an RTX 4060, answers that end from 0% to 80%" width="100%">
+</p>
+
 A small ChatGPT-style language model built and trained from scratch on a single laptop GPU (RTX 4060, 8 GB).
 
 Everything is written by hand in Python and PyTorch: the byte-level BPE tokenizer, the transformer, the training loop and the chat format. No pretrained weights, no model libraries.
