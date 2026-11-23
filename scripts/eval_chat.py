@@ -77,7 +77,7 @@ def main() -> None:
     for q in QUESTIONS:
         g = torch.Generator(device=device).manual_seed(args.seed)
         prompt = torch.tensor([prompt_ids(tok, [("user", q)])], device=device)
-        with torch.autocast("cuda", dtype=torch.bfloat16, enabled=device == "cuda"):
+        with torch.autocast("cuda" if device.startswith("cuda") else "cpu", dtype=torch.bfloat16, enabled=device == "cuda"):
             out = model.generate(prompt, args.max_new, args.temperature, top_k=None, stop_ids={end_id, user_id},
                                  top_p=args.top_p, repetition_penalty=args.repetition_penalty, generator=g)
         new = out[0, prompt.shape[1]:].tolist()

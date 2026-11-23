@@ -14,7 +14,7 @@ def validation_loss(model, stream: TokenStream, batch_size: int, device: str, ma
     model.eval()
     total, count = 0.0, 0
     for x, y in stream.windows(batch_size, device, max_windows):
-        with torch.autocast("cuda", dtype=torch.bfloat16, enabled=device.startswith("cuda")):
+        with torch.autocast("cuda" if device.startswith("cuda") else "cpu", dtype=torch.bfloat16, enabled=device.startswith("cuda")):
             _, loss = model(x, y)
         total += loss.item() * x.shape[0]
         count += x.shape[0]

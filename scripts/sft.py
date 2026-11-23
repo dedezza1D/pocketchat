@@ -59,7 +59,7 @@ def val_loss(model, data: ChatSet, batch_size: int, pad_id: int, device: str) ->
     for i in range(0, len(data), batch_size):
         x, y = data.batch(range(i, min(i + batch_size, len(data))), pad_id, device)
         n = int((y != IGNORE).sum())
-        with torch.autocast("cuda", dtype=torch.bfloat16, enabled=device == "cuda"):
+        with torch.autocast("cuda" if device.startswith("cuda") else "cpu", dtype=torch.bfloat16, enabled=device == "cuda"):
             _, loss = model(x, y)
         total += loss.item() * n
         count += n
@@ -153,7 +153,7 @@ def main() -> None:
         step_loss = 0.0
         for x, y in micro:
             n = int((y != IGNORE).sum())
-            with torch.autocast("cuda", dtype=torch.bfloat16, enabled=device == "cuda"):
+            with torch.autocast("cuda" if device.startswith("cuda") else "cpu", dtype=torch.bfloat16, enabled=device == "cuda"):
                 _, loss = model(x, y)
             (loss * n / n_total).backward()  # token-weighted mean over the whole step
             step_loss += loss.item() * n / n_total

@@ -52,7 +52,7 @@ def main() -> None:
             continue
         turns = fit_history(tok, turns + [("user", msg)], model.cfg.seq_len, args.max_new)
         prompt = torch.tensor([prompt_ids(tok, turns)], device=device)
-        with torch.autocast("cuda", dtype=torch.bfloat16, enabled=device == "cuda"):
+        with torch.autocast("cuda" if device.startswith("cuda") else "cpu", dtype=torch.bfloat16, enabled=device == "cuda"):
             out = model.generate(prompt, args.max_new, args.temperature, top_k=None, stop_ids=stop,
                                  top_p=args.top_p, repetition_penalty=args.repetition_penalty)
         reply = tok.decode([t for t in out[0, prompt.shape[1]:].tolist() if t not in stop])

@@ -30,7 +30,7 @@ def main() -> None:
 
     for i in range(args.n):
         idx = torch.tensor([tok.encode(args.prompt)], device=device)
-        with torch.autocast("cuda", dtype=torch.bfloat16, enabled=device == "cuda"):
+        with torch.autocast("cuda" if device.startswith("cuda") else "cpu", dtype=torch.bfloat16, enabled=device == "cuda"):
             out = model.generate(idx, args.tokens, args.temperature, args.top_k, stop)
         print(f"--- sample {i + 1} ---")
         print(tok.decode(out[0].tolist()))

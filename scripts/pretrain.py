@@ -116,7 +116,7 @@ def main() -> None:
         step_loss = torch.zeros((), device=device)
         for _ in range(args.grad_accum):
             x, y = train.batch(args.batch_size, device)
-            with torch.autocast("cuda", dtype=torch.bfloat16, enabled=device == "cuda"):
+            with torch.autocast("cuda" if device.startswith("cuda") else "cpu", dtype=torch.bfloat16, enabled=device == "cuda"):
                 _, loss = model(x, y)
             (loss / args.grad_accum).backward()
             step_loss += loss.detach() / args.grad_accum

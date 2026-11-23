@@ -56,12 +56,13 @@ def test_pretrain_writes_the_final_checkpoint_fine_tuning_starts_from(tmp_path):
     write_tokens(tmp_path / "train.bin", ids)
     write_tokens(tmp_path / "val.bin", ids[:400])
     out = tmp_path / "run.pt"
-    subprocess.run(
+    run = subprocess.run(
         [sys.executable, str(ROOT / "scripts" / "pretrain.py"), "--data-dir", str(tmp_path), "--tokenizer", str(a),
          "--out", str(out), "--n-layer", "1", "--n-head", "2", "--n-embd", "32", "--seq-len", "16",
          "--batch-size", "2", "--grad-accum", "1", "--max-steps", "4", "--warmup", "1", "--eval-every", "2"],
-        check=True, cwd=ROOT, capture_output=True,
+        cwd=ROOT, capture_output=True, text=True,
     )
+    assert run.returncode == 0, run.stderr[-2000:]
 
     final = torch.load(tmp_path / "run_final.pt", map_location="cpu")
     assert final["step"] == 3
