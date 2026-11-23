@@ -3,7 +3,7 @@
 [![tests](https://github.com/dedezza1D/pocketchat/actions/workflows/tests.yml/badge.svg)](https://github.com/dedezza1D/pocketchat/actions/workflows/tests.yml)
 
 <p align="center">
-  <img src="assets/pocketchat.png" alt="pocketchat — a mini ChatGPT built and trained from scratch on a laptop GPU: 29.9M parameters, 491M tokens, about 4 hours on an RTX 4060, answers that end from 0% to 80%" width="100%">
+  <img src="assets/pocketchat.png" alt="pocketchat — a mini ChatGPT built and trained from scratch on a laptop GPU: 29.9M parameters, a 483M-token corpus, about 4 hours on an RTX 4060, 80% of answers end with the end-of-turn token" width="100%">
 </p>
 
 A small ChatGPT-style language model built and trained from scratch on a single laptop GPU (RTX 4060, 8 GB).
@@ -29,14 +29,14 @@ Every checkpoint records the tokenizer it was trained with (path and SHA-256), a
 |---|---|
 | Architecture | 8 layers, 8 heads, width 512, SwiGLU hidden 1,408, context 512, vocabulary 8,192, tied embeddings |
 | Parameters | 29.9M |
-| Pretraining | 15,000 steps × 32,768 tokens (491M token positions), AdamW (β 0.9, 0.95), weight decay 0.1, learning rate 1e-3 → 1e-4 (warmup + cosine), bf16, peak 3.2 GiB, about 4 h |
+| Pretraining | 15,000 steps × 32,768 tokens (491M token positions sampled from a 483M-token corpus), AdamW (β 0.9, 0.95), weight decay 0.1, learning rate 1e-3 → 1e-4 (warmup + cosine), bf16, peak 3.2 GiB, about 4 h |
 | Fine-tuning | 17,411 conversations, 3 passes (1,632 steps), learning rate 1e-4 → 1e-5, about 20 min |
 
 <p align="center">
   <img src="assets/training_curves.svg" alt="Validation loss during pretraining, from 4.58 at step 500 to 3.24 at step 15,000, and assistant-token validation loss during fine-tuning for the two runs, from 2.96 and 3.10 to about 2.58" width="100%">
 </p>
 
-(`scripts/plot_curves.py`. During pretraining each point used a sampled subset of the validation windows; the final value uses all of them.)
+(`scripts/plot_curves.py`. During pretraining each point used a sampled subset of the validation windows; on all 4,997 windows, the final loss is 3.243.)
 
 ## Results
 

@@ -2,9 +2,10 @@
 
     uv run python scripts/plot_curves.py   -> assets/training_curves.svg
 
-Left: pretraining validation loss (each point is a sampled subset of the validation windows; the
-last point uses all of them). Right: fine-tuning validation loss on the assistant tokens, for the
-run that kept the chat-token rows and the run that reinitialized them.
+Left: pretraining validation loss (each point is a sampled subset of the validation windows, as
+logged during training; evals/forgetting.txt has the loss on all of them). Right: fine-tuning
+validation loss on the assistant tokens, for the run that kept the chat-token rows and the run that
+reinitialized them.
 """
 
 import json
