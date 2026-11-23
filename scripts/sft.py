@@ -17,6 +17,7 @@ import numpy as np
 import torch
 
 from pocketchat.chat_format import ASSISTANT, END, IGNORE, USER
+from pocketchat.checkpoint import resolve_tokenizer, tokenizer_record
 from pocketchat.model import GPT, GPTConfig
 from pocketchat.tokenizer import BPETokenizer
 
@@ -86,7 +87,7 @@ def reinit_chat_rows(model: GPT, tok: BPETokenizer, seed: int) -> None:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--init", default="checkpoints/pretrain_final.pt")
-    ap.add_argument("--tokenizer", default="data/tokenizer_full.json")
+    ap.add_argument("--tokenizer", default=None, help="default: the tokenizer recorded in --init")
     ap.add_argument("--data-dir", default="data/sft")
     ap.add_argument("--out", default="checkpoints/sft.pt")
     ap.add_argument("--reinit-chat-tokens", action="store_true")
@@ -107,9 +108,10 @@ def main() -> None:
     device = "cuda" if torch.cuda.is_available() else "cpu"
     torch.backends.cuda.matmul.allow_tf32 = True
 
-    tok = BPETokenizer.load(args.tokenizer)
-    pad_id = tok.special_tokens["<|endoftext|>"]
     init = torch.load(args.init, map_location=device)
+    tok = resolve_tokenizer(init, args.tokenizer)
+    tok_rec = init.get("tokenizer") or tokenizer_record(args.tokenizer)
+    pad_id = tok.special_tokens["<|endoftext|>"]
     cfg = GPTConfig(**{**init["config"], "dropout": args.dropout})
     model = GPT(cfg).to(device)
     model.load_state_dict(init["model"])
@@ -169,7 +171,7 @@ def main() -> None:
                 best, mark = v, " (best)"
                 Path(args.out).parent.mkdir(parents=True, exist_ok=True)
                 torch.save({"config": {**cfg.to_dict(), "dropout": 0.0}, "model": model.state_dict(),
-                            "step": step, "val_loss": v}, args.out)
+                            "step": step, "val_loss": v, "tokenizer": tok_rec, "args": vars(args)}, args.out)
             print(f"  eval: val {v:.3f}{mark}")
 
     Path(args.out).with_suffix(".log.json").write_text(json.dumps(log, indent=1))

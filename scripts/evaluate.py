@@ -1,6 +1,6 @@
 """Measure checkpoints on the full validation set (fixed windows).
 
-    uv run python scripts/evaluate.py --ckpt checkpoints/pretrain.pt checkpoints/pretrain.last.pt
+    uv run python scripts/evaluate.py --ckpt checkpoints/pretrain_final.pt checkpoints/sft_reinit.pt
 
 Works with the best checkpoint (config + model) and with <out>.last.pt (model only;
 the config is then read from --config-from).
@@ -20,7 +20,7 @@ from pocketchat.model import GPT, GPTConfig
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--ckpt", nargs="+", required=True)
-    ap.add_argument("--config-from", default="checkpoints/pretrain.pt")
+    ap.add_argument("--config-from", default="checkpoints/pretrain_final.pt")
     ap.add_argument("--data-dir", default="data/full")
     ap.add_argument("--batch-size", type=int, default=32)
     args = ap.parse_args()

@@ -12,8 +12,7 @@ import argparse
 import torch
 
 from pocketchat.chat_format import END, USER, prompt_ids
-from pocketchat.model import GPT, GPTConfig
-from pocketchat.tokenizer import BPETokenizer
+from pocketchat.checkpoint import load_model
 
 
 def fit_history(tok, turns, seq_len, reserve):
@@ -26,7 +25,7 @@ def fit_history(tok, turns, seq_len, reserve):
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--ckpt", default="checkpoints/sft_reinit.pt")
-    ap.add_argument("--tokenizer", default="data/tokenizer_full.json")
+    ap.add_argument("--tokenizer", default=None, help="default: the tokenizer recorded in the checkpoint")
     ap.add_argument("--max-new", type=int, default=200)
     ap.add_argument("--temperature", type=float, default=0.7)
     ap.add_argument("--top-p", type=float, default=0.9)
@@ -34,10 +33,7 @@ def main() -> None:
     args = ap.parse_args()
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    tok = BPETokenizer.load(args.tokenizer)
-    state = torch.load(args.ckpt, map_location=device)
-    model = GPT(GPTConfig(**state["config"])).to(device).eval()
-    model.load_state_dict(state["model"])
+    model, tok, state = load_model(args.ckpt, device, args.tokenizer)
     stop = {tok.special_tokens[END], tok.special_tokens[USER]}
 
     turns: list[tuple[str, str]] = []

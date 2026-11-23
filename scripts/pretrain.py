@@ -2,6 +2,9 @@
 
     uv run python scripts/pretrain.py --max-steps 200 --out checkpoints/smoke.pt
 
+Writes <out> (best validation loss), <out stem>_final.pt (last step, the one fine-tuning starts from)
+and <out>.last.pt (full state for --resume). Every checkpoint records the tokenizer it was trained with.
+
 Uses bf16 autocast, gradient accumulation, AdamW with a warmup + cosine schedule,
 and reports throughput so a full run can be sized for the available GPU.
 """
@@ -14,6 +17,7 @@ from pathlib import Path
 
 import torch
 
+from pocketchat.checkpoint import tokenizer_record
 from pocketchat.data import TokenStream
 from pocketchat.evaluation import validation_loss
 from pocketchat.model import GPT, GPTConfig
@@ -63,6 +67,8 @@ def main() -> None:
     torch.backends.cuda.matmul.allow_tf32 = True
 
     tok = BPETokenizer.load(args.tokenizer)
+    tok_rec = tokenizer_record(args.tokenizer)
+    final_path = Path(args.out).with_name(Path(args.out).stem + "_final.pt")
     cfg = GPTConfig(
         vocab_size=tok.vocab_size,
         seq_len=args.seq_len,
@@ -132,9 +138,14 @@ def main() -> None:
             log.append({"step": step, "train_loss": step_loss.item(), "val_loss": v, "lr": lr})
             print(f"  eval: val loss {v:.3f} (perplexity {math.exp(v):.1f})")
             Path(args.out).parent.mkdir(parents=True, exist_ok=True)
+            weights = {"config": cfg.to_dict(), "model": model.state_dict(), "step": step, "val_loss": v,
+                       "tokenizer": tok_rec, "args": vars(args)}
             if v < best_val:
                 best_val = v
-                torch.save({"config": cfg.to_dict(), "model": model.state_dict(), "step": step, "val_loss": v}, args.out)
+                torch.save(weights, args.out)
+            if step == args.max_steps - 1:
+                # the last step, whatever the validation said: with a sampled validation the "best" step can be noise
+                torch.save(weights, final_path)
             torch.save(
                 {
                     "model": model.state_dict(),
@@ -151,7 +162,7 @@ def main() -> None:
     Path(args.out).with_suffix(".log.json").write_text(json.dumps(log, indent=1))
     if device == "cuda":
         print(f"peak GPU memory: {torch.cuda.max_memory_allocated() / 2**30:.2f} GiB")
-    print(f"best val loss {best_val:.3f} -> {args.out}")
+    print(f"best val loss {best_val:.3f} -> {args.out}; last step -> {final_path}")
 
 
 if __name__ == "__main__":

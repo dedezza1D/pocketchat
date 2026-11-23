@@ -1,6 +1,6 @@
 """Answer a fixed set of questions and measure the behaviour that SFT is meant to change.
 
-    uv run python scripts/eval_chat.py --ckpt checkpoints/sft_reinit.pt --name reinit
+    uv run python scripts/eval_chat.py --ckpt checkpoints/sft_reinit.pt --name sft_reinit
 
 Metrics per checkpoint (same questions, same seed, same sampling settings):
 - ended: share of answers that close with <|end|> before the token limit
@@ -15,8 +15,7 @@ from pathlib import Path
 import torch
 
 from pocketchat.chat_format import END, USER, prompt_ids
-from pocketchat.model import GPT, GPTConfig
-from pocketchat.tokenizer import BPETokenizer
+from pocketchat.checkpoint import load_model
 
 QUESTIONS = [
     "What is the water cycle?",
@@ -61,7 +60,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--ckpt", required=True)
     ap.add_argument("--name", required=True)
-    ap.add_argument("--tokenizer", default="data/tokenizer_full.json")
+    ap.add_argument("--tokenizer", default=None, help="default: the tokenizer recorded in the checkpoint")
     ap.add_argument("--max-new", type=int, default=200)
     ap.add_argument("--temperature", type=float, default=0.7)
     ap.add_argument("--top-p", type=float, default=0.9)
@@ -71,10 +70,7 @@ def main() -> None:
     args = ap.parse_args()
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    tok = BPETokenizer.load(args.tokenizer)
-    state = torch.load(args.ckpt, map_location=device)
-    model = GPT(GPTConfig(**state["config"])).to(device).eval()
-    model.load_state_dict(state["model"])
+    model, tok, state = load_model(args.ckpt, device, args.tokenizer)
     end_id, user_id = tok.special_tokens[END], tok.special_tokens[USER]
 
     rows = []

@@ -1,0 +1,44 @@
+"""Checkpoints that remember which tokenizer they were trained with.
+
+Two tokenizers with the same vocabulary size are interchangeable as far as tensor shapes go,
+so loading a model with the wrong one fails silently: the text just comes out scrambled.
+Every checkpoint written by the training scripts records the tokenizer's path and SHA-256,
+and `load_model` refuses a tokenizer whose hash does not match.
+"""
+
+import hashlib
+from pathlib import Path
+
+import torch
+
+from pocketchat.model import GPT, GPTConfig
+from pocketchat.tokenizer import BPETokenizer
+
+
+def tokenizer_record(path: str | Path) -> dict:
+    """Path and SHA-256 of a tokenizer file, stored inside each checkpoint."""
+    data = Path(path).read_bytes()
+    return {"path": Path(path).as_posix(), "sha256": hashlib.sha256(data).hexdigest()}
+
+
+def resolve_tokenizer(state: dict, override: str | Path | None = None) -> BPETokenizer:
+    """The tokenizer a checkpoint was trained with, or `override` if its hash matches."""
+    record = state.get("tokenizer")
+    if override is None:
+        if record is None:
+            raise ValueError("this checkpoint does not record its tokenizer; pass --tokenizer")
+        override = record["path"]
+    if record is not None and tokenizer_record(override)["sha256"] != record["sha256"]:
+        raise ValueError(
+            f"tokenizer {override} does not match the one this checkpoint was trained with ({record['path']})"
+        )
+    return BPETokenizer.load(override)
+
+
+def load_model(path: str | Path, device: str, tokenizer: str | Path | None = None) -> tuple[GPT, BPETokenizer, dict]:
+    """Load a checkpoint with `config` and `model`, plus the tokenizer it was trained with."""
+    state = torch.load(path, map_location=device)
+    tok = resolve_tokenizer(state, tokenizer)
+    model = GPT(GPTConfig(**state["config"])).to(device).eval()
+    model.load_state_dict(state["model"])
+    return model, tok, state
