@@ -78,17 +78,25 @@ Fine-tuning teaches the format (answer, then stop); it does not add knowledge. A
 - Generation recomputes the whole context for every token (no KV cache).
 - The same seed reproduces answers only on the same GPU and PyTorch version (bf16 sampling on CUDA).
 
-## Pretrained weights
+## Weights
 
-The pretrained model (step 15,000, before chat fine-tuning) and its tokenizer are in the [v0.1.0 release](https://github.com/dedezza1D/pocketchat/releases/tag/v0.1.0). To sample from it without training:
+Both models can be used without training:
 
-```bash
-gh release download v0.1.0 --repo dedezza1D/pocketchat --pattern pretrain_final.pt --dir checkpoints
-gh release download v0.1.0 --repo dedezza1D/pocketchat --pattern tokenizer_full.json --dir data
-uv run python scripts/sample.py --prompt "Water is made of hydrogen and" --seed 0
-```
+- **Pretrained** (step 15,000, before chat fine-tuning), MIT License: [v0.1.0](https://github.com/dedezza1D/pocketchat/releases/tag/v0.1.0).
 
-The fine-tuned chat weights are not published: part of their training data, Dolly 15k, is CC BY-SA 3.0.
+  ```bash
+  gh release download v0.1.0 --repo dedezza1D/pocketchat --pattern pretrain_final.pt --dir checkpoints
+  gh release download v0.1.0 --repo dedezza1D/pocketchat --pattern tokenizer_full.json --dir data
+  uv run python scripts/sample.py --prompt "Water is made of hydrogen and" --seed 0
+  ```
+
+- **Chat** (fine-tuned, chat-token rows reinitialized), [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) because of the Dolly 15k data: [v0.2.0](https://github.com/dedezza1D/pocketchat/releases/tag/v0.2.0).
+
+  ```bash
+  gh release download v0.2.0 --repo dedezza1D/pocketchat --pattern sft_reinit.pt --dir checkpoints
+  gh release download v0.2.0 --repo dedezza1D/pocketchat --pattern tokenizer_full.json --dir data
+  uv run python scripts/chat.py --ckpt checkpoints/sft_reinit.pt
+  ```
 
 ## Quick start
 
@@ -126,4 +134,6 @@ The code is released under the [MIT License](LICENSE). The datasets keep their o
 
 ## Data licenses
 
-FineWeb-Edu is released under ODC-By; the published pretrained weights were trained only on it (attribution: Hugging Face, FineWeb-Edu) and are released under the MIT License, like the code. oasst1 is Apache-2.0. databricks-dolly-15k is CC BY-SA 3.0 (attribution: Databricks). No outputs of commercial models were used for training.
+FineWeb-Edu is released under ODC-By (attribution: Hugging Face). oasst1 is Apache-2.0 (attribution: OpenAssistant). databricks-dolly-15k is CC BY-SA 3.0 (attribution: Databricks). No outputs of commercial models were used for training.
+
+The pretrained weights were trained only on FineWeb-Edu and are released under the MIT License, like the code. The chat weights were also trained on databricks-dolly-15k, so they are released under CC BY-SA 3.0, and modified versions must keep that license.
