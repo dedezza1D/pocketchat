@@ -78,6 +78,18 @@ Fine-tuning teaches the format (answer, then stop); it does not add knowledge. A
 - Generation recomputes the whole context for every token (no KV cache).
 - The same seed reproduces answers only on the same GPU and PyTorch version (bf16 sampling on CUDA).
 
+## Pretrained weights
+
+The pretrained model (step 15,000, before chat fine-tuning) and its tokenizer are in the [v0.1.0 release](https://github.com/dedezza1D/pocketchat/releases/tag/v0.1.0). To sample from it without training:
+
+```bash
+gh release download v0.1.0 --repo dedezza1D/pocketchat --pattern pretrain_final.pt --dir checkpoints
+gh release download v0.1.0 --repo dedezza1D/pocketchat --pattern tokenizer_full.json --dir data
+uv run python scripts/sample.py --prompt "Water is made of hydrogen and" --seed 0
+```
+
+The fine-tuned chat weights are not published: part of their training data, Dolly 15k, is CC BY-SA 3.0.
+
 ## Quick start
 
 ```bash
@@ -114,4 +126,4 @@ The code is released under the [MIT License](LICENSE). The datasets keep their o
 
 ## Data licenses
 
-FineWeb-Edu is released under ODC-By. oasst1 is Apache-2.0. databricks-dolly-15k is CC BY-SA 3.0 (attribution: Databricks). No outputs of commercial models were used for training.
+FineWeb-Edu is released under ODC-By; the published pretrained weights were trained only on it (attribution: Hugging Face, FineWeb-Edu) and are released under the MIT License, like the code. oasst1 is Apache-2.0. databricks-dolly-15k is CC BY-SA 3.0 (attribution: Databricks). No outputs of commercial models were used for training.
