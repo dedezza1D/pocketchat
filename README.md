@@ -86,7 +86,7 @@ Both models can be used without training:
 
   ```bash
   gh release download v0.1.0 --repo dedezza1D/pocketchat --pattern pretrain_final.pt --dir checkpoints
-  gh release download v0.1.0 --repo dedezza1D/pocketchat --pattern tokenizer_full.json --dir data
+  gh release download v0.1.0 --repo dedezza1D/pocketchat --pattern tokenizer_full.json --dir data --skip-existing
   uv run python scripts/sample.py --prompt "Water is made of hydrogen and" --seed 0
   ```
 
@@ -94,9 +94,11 @@ Both models can be used without training:
 
   ```bash
   gh release download v0.2.0 --repo dedezza1D/pocketchat --pattern sft_reinit.pt --dir checkpoints
-  gh release download v0.2.0 --repo dedezza1D/pocketchat --pattern tokenizer_full.json --dir data
+  gh release download v0.2.0 --repo dedezza1D/pocketchat --pattern tokenizer_full.json --dir data --skip-existing
   uv run python scripts/chat.py --ckpt checkpoints/sft_reinit.pt
   ```
+
+Both releases ship the same `tokenizer_full.json`, so `--skip-existing` keeps the copy you already have.
 
 ## Quick start
 
