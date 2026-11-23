@@ -1,0 +1,3 @@
+checkpoints/pretrain_final.pt: step 14999 | full val loss 3.2429 | perplexity 25.61 | 4997 windows
+checkpoints/sft_keep.pt: step 1000 | full val loss 3.4063 | perplexity 30.15 | 4997 windows
+checkpoints/sft_reinit.pt: step 1000 | full val loss 3.4055 | perplexity 30.13 | 4997 windows

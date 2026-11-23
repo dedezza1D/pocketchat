@@ -1,0 +1,6 @@
+train: 18773 user prompts
+  same prompt as an eval question: ['What is the capital of France?', 'Why is the sky blue?', 'What causes earthquakes?', 'What is the Pythagorean theorem?']
+  prompts containing an eval question: {'What is the capital of France?': 2, 'Why is the sky blue?': 11, 'What causes earthquakes?': 1, 'What is machine learning?': 1, 'What is the Pythagorean theorem?': 1}
+val: 590 user prompts
+  same prompt as an eval question: none
+  prompts containing an eval question: none
