@@ -8,6 +8,8 @@ cleaner language than raw web crawl. Streaming avoids downloading the full datas
 
 import argparse
 import json
+import logging
+from contextlib import closing
 from pathlib import Path
 
 from datasets import load_dataset
@@ -30,8 +32,8 @@ def main() -> None:
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
     written = chars = 0
-    with out.open("w", encoding="utf-8") as f, tqdm(total=args.docs, unit="doc") as bar:
-        for row in ds:
+    with closing(iter(ds)) as rows, out.open("w", encoding="utf-8") as f, tqdm(total=args.docs, unit="doc") as bar:
+        for row in rows:
             text = row["text"].strip()
             if len(text) < args.min_chars:
                 continue
@@ -41,6 +43,10 @@ def main() -> None:
             bar.update(1)
             if written >= args.docs:
                 break
+        # Stopping mid-file leaves a pyarrow read of the next block in flight. When the stream closes, or the
+        # interpreter exits, its connection is closed and huggingface_hub logs a failed request and a retry,
+        # although every document is already written. Those reads are no longer needed, so their warnings are hidden.
+        logging.getLogger("huggingface_hub").setLevel(logging.ERROR)
     print(f"wrote {written} docs, {chars / 1e6:.1f}M chars to {out}")
 
 
