@@ -1,0 +1,21 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+      # the lockfile pins the CUDA build of torch; the tests run on the CPU build
+      - run: uv venv
+      - run: uv pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - run: uv pip install numpy "regex>=2026.11.15" pytest
+      - run: uv pip install --no-deps -e .
+      - run: uv run --no-sync pytest -q
