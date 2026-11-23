@@ -19,6 +19,7 @@ from pocketchat.chat_format import IGNORE, encode_conversation, prompt_ids, to_e
 from pocketchat.checkpoint import check_data_tokenizer, tokenizer_record, write_data_record
 from pocketchat.data import write_tokens
 from pocketchat.model import GPT, GPTConfig, apply_rope, rope_tables
+from pocketchat import qa
 from pocketchat.tokenizer import _SPLIT, BPETokenizer, _merge
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -32,6 +33,7 @@ if "datasets" not in sys.modules:
 import chat  # noqa: E402
 import check_eval_overlap  # noqa: E402
 import download_weights  # noqa: E402
+import eval_qa  # noqa: E402
 import next_word  # noqa: E402
 import prepare_sft  # noqa: E402
 import sft  # noqa: E402
@@ -366,3 +368,76 @@ def test_weights_download_checks_the_hash_and_never_overwrites_another_file(tmp_
     with pytest.raises(SystemExit, match="did not match"):
         download_weights.fetch(url, other, "0" * 64)
     assert not other.exists() and not other.with_name("other.pt.part").exists()
+
+
+# eval_qa.py and pocketchat/qa.py ---------------------------------------------------------------------
+def test_answers_are_scored_as_in_squad():
+    refs = ["Denver Broncos", "the Denver Broncos"]
+    assert qa.normalize("The  Denver Broncos!") == "denver broncos"
+    assert qa.exact("denver broncos.", refs) == 1.0 and qa.exact("Broncos", refs) == 0.0
+    assert qa.f1("Broncos", refs) == pytest.approx(2 * 1 * 0.5 / 1.5)
+    assert qa.f1("Carolina Panthers", refs) == 0.0
+    assert qa.contains("It was the Denver Broncos, in 2016.", refs) == 1.0
+    assert qa.contains("It was completed in 1889.", ["1"]) == 0.0  # whole words only
+    assert qa.contains("", refs) == 0.0 and qa.contains("anything", [""]) == 0.0
+
+
+def test_qa_prompts_put_the_passage_before_the_question():
+    tok = chat_tokenizer()
+    chat_ids = qa.encode(tok, "What is water made of?", "Water is made of hydrogen and oxygen.", "chat")
+    assert chat_ids[0] == tok.special_tokens["<|user|>"] and chat_ids[-1] == tok.special_tokens["<|assistant|>"]
+    text = tok.decode(chat_ids)
+    assert text.index("hydrogen and oxygen") < text.index("What is water made of?")
+    assert qa.plain_text("Q?", None) == "Question: Q?\nAnswer:"
+    assert qa.plain_text("Q?", "C.") == "C.\n\nQuestion: Q?\nAnswer:"
+    with pytest.raises(ValueError):
+        qa.encode(tok, "Q?", None, "other")
+
+
+def test_qa_questions_are_fixed_one_per_paragraph_and_fit_the_context():
+    tok = chat_tokenizer()
+    rows = [{"id": str(i), "question": f"What is water made of? {i}", "context": TEXT[: 40 + (i % 5) * 600],
+             "answers": {"text": ["oxygen"]}} for i in range(40)]
+    budget = 120
+    first = eval_qa.select(rows, tok, n=10, seed=3, budget=budget)
+    assert first == eval_qa.select(rows, tok, n=10, seed=3, budget=budget)
+    assert first != eval_qa.select(rows, tok, n=10, seed=4, budget=budget)
+    assert len({r["context"] for r in first}) == len(first)
+    for r in first:
+        for fmt in ("chat", "plain"):
+            assert len(qa.encode(tok, r["question"], r["context"], fmt)) <= budget
+
+
+def test_plain_answers_stop_at_the_end_of_the_line():
+    tok = chat_tokenizer()
+    breaks = eval_qa.line_break_ids(tok)
+    assert breaks and all("\n" in tok.decode([i]) for i in breaks)
+    assert not breaks & set(tok.special_tokens.values())
+
+
+def test_overlap_check_finds_a_shared_run_even_across_chunk_borders():
+    import check_qa_overlap as ov
+    rng = np.random.default_rng(0)
+    corpus = rng.integers(0, 8000, 1000).astype(np.uint16)
+    passage = corpus[495:510].copy()  # 15 tokens straddling the border of 500-token chunks
+    other = rng.integers(0, 8000, 15).astype(np.uint16)
+    q_seen, q_new = ov.ngram_hashes(passage, 13), ov.ngram_hashes(other, 13)
+    assert len(q_seen) == 3 and len(ov.ngram_hashes(passage[:12], 13)) == 0
+    hits = ov.found(corpus, np.concatenate([q_seen, q_new]), 13, chunk=500)
+    assert set(hits) == set(q_seen)
+
+
+def test_qa_report_splits_scores_by_pretraining_overlap():
+    import report_qa
+    answers = [
+        {"id": "a", "mode": "open", "exact": 1.0, "f1": 1.0, "contains": 1.0},
+        {"id": "b", "mode": "open", "exact": 0.0, "f1": 0.5, "contains": 1.0},
+        {"id": "c", "mode": "open", "exact": 0.0, "f1": 0.0, "contains": 0.0},
+        {"id": "a", "mode": "closed", "exact": 0.0, "f1": 0.0, "contains": 0.0},
+    ]
+    shares = {"a": {"pretraining": 0.0}, "b": {"pretraining": 0.6}, "c": {"pretraining": 1.0}}
+    unseen = report_qa.group_scores(answers, shares, "open", 0.0, 0.1)
+    assert unseen == {"n": 1, "exact": 1.0, "f1": 1.0, "contains": 1.0}
+    copies = report_qa.group_scores(answers, shares, "open", 0.5, 1.01)
+    assert copies["n"] == 2 and copies["f1"] == pytest.approx(0.25) and copies["contains"] == pytest.approx(0.5)
+    assert report_qa.group_scores(answers, shares, "closed", 0.5, 1.01) == {"n": 0}
