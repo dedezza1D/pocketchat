@@ -94,6 +94,17 @@ Two answers from the fine-tuned model:
 
 Fine-tuning teaches the format (answer, then stop); it does not add knowledge. At this size the answers are fluent and on topic but often wrong.
 
+### Are the answers right?
+
+500 [SQuAD v1.1](https://huggingface.co/datasets/rajpurkar/squad) questions, greedy decoding, asked alone (closed book) and after the Wikipedia paragraph that holds the answer (open book). "Contains" counts answers that include the reference answer (`evals/qa_*.md`):
+
+| Model | Closed book: exact / contains | Open book: exact / contains |
+|---|---|---|
+| Pretrained only | 0% / 0.4% | 0% / 3.4% |
+| Fine-tuned, chat-token rows reinitialized | 0% / 0.6% | 0% / 17.8% |
+
+Without the paragraph the model does not know the answers. With it, the fine-tuned model copies the right span about one time in six, always inside a full sentence, so exact match stays at 0%. 18 paragraphs are near copies of pretraining text (`evals/qa_overlap.txt`); on them the scores are no better.
+
 ## Findings
 
 - **The "best" pretraining checkpoint was noise.** Validation during training used a different random sample of windows each time, and near the end consecutive values moved by a few hundredths. Measured on all fixed windows, the last step (3.2429) was better than the step marked as best (3.2514). Since then, validation uses fixed windows and fine-tuning starts from the last step (`pretrain_final.pt`).
@@ -163,6 +174,7 @@ uv run python scripts/prepare_sft.py
 uv run python scripts/sft.py --out checkpoints/sft_reinit.pt --reinit-chat-tokens
 uv run python scripts/eval_chat.py --ckpt checkpoints/sft_reinit.pt --name sft_reinit
 uv run python scripts/evaluate.py --ckpt checkpoints/pretrain_final.pt checkpoints/sft_reinit.pt
+uv run python scripts/eval_qa.py --ckpt checkpoints/sft_reinit.pt --name qa_sft_reinit
 uv run python scripts/chat.py --ckpt checkpoints/sft_reinit.pt
 ```
 
@@ -174,6 +186,6 @@ The code is released under the [MIT License](LICENSE). The datasets keep their o
 
 ## Data licenses
 
-FineWeb-Edu is released under ODC-By (attribution: Hugging Face). oasst1 is Apache-2.0 (attribution: OpenAssistant). databricks-dolly-15k is CC BY-SA 3.0 (attribution: Databricks). No outputs of commercial models were used for training.
+FineWeb-Edu is released under ODC-By (attribution: Hugging Face). oasst1 is Apache-2.0 (attribution: OpenAssistant). databricks-dolly-15k is CC BY-SA 3.0 (attribution: Databricks). No outputs of commercial models were used for training. SQuAD v1.1 (CC BY-SA 4.0, attribution: Rajpurkar et al.) is used only for evaluation.
 
 The pretrained weights were trained only on FineWeb-Edu and are released under the MIT License, like the code. The chat weights were also trained on databricks-dolly-15k, so they are released under CC BY-SA 3.0, and modified versions must keep that license.

@@ -1,0 +1,23 @@
+500 questions, one per paragraph; a paragraph is seen when a run of 13 of its tokens appears
+pretraining: paragraphs sharing 13-token runs with the data: 82 with any run, 36 with at least 10%, 18 with at least 50%
+  5726400589a1e219009ac5f1 (Ctenophora): 100% of its runs
+  5726431d271a42140099d7f9 (Ctenophora): 100% of its runs
+  572751b4708984140094dc1f (Construction): 99% of its runs
+  57265746dd62a815002e821b (Ctenophora): 99% of its runs
+  57274e975951b619008f87f9 (Construction): 99% of its runs
+  57274e0d708984140094dbe5 (Construction): 99% of its runs
+  57268c01dd62a815002e8913 (Ctenophora): 95% of its runs
+  572663a9f1498d1400e8ddf5 (Geology): 92% of its runs
+  572655e5f1498d1400e8dc60 (Ctenophora): 92% of its runs
+  57268a37f1498d1400e8e33d (Ctenophora): 84% of its runs
+  572742bd5951b619008f8788 (Construction): 79% of its runs
+  57268527708984140094c8bf (Geology): 78% of its runs
+  57273a465951b619008f8702 (Construction): 74% of its runs
+  57264cfa708984140094c1c7 (Ctenophora): 70% of its runs
+  56e74faf00c9c71400d76f98 (Teacher): 69% of its runs
+  56e7591b00c9c71400d76fee (Teacher): 58% of its runs
+  56e759bb00c9c71400d77001 (Teacher): 57% of its runs
+  56e75e4500c9c71400d7702e (Teacher): 54% of its runs
+fine-tuning: paragraphs sharing 13-token runs with the data: 7 with any run, 0 with at least 10%, 0 with at least 50%
+fine-tuning train: 0 questions are also a user prompt
+fine-tuning val: 0 questions are also a user prompt

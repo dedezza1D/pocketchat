@@ -1,0 +1,2002 @@
+{
+"56e0c0c7231d4119001ac375": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572ffabf04bcaa1900d76f9f": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5730a0778ab72b1400f9c60e": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e748a200c9c71400d76f38": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572fdb17b2c2fd1400568521": {
+"pretraining": 0.0052,
+"fine-tuning": 0.0
+},
+"5725e36f89a1e219009ac038": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5730ab288ab72b1400f9c657": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572648ed5951b619008f6f04": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5733a32bd058e614000b5f34": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57293f353f37b3190047819c": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56d6f2960d65d21400198289": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5728e07e3acd2414000e00e9": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5710e9f8a58dae1900cd6b33": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572fe1d404bcaa1900d76e3b": {
+"pretraining": 0.0,
+"fine-tuning": 0.0049
+},
+"56f88025aef237190062611e": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57378b141c4567190057449f": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"571ce9bddd7acb1400e4c1a2": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572847dd4b864d19001648bd": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56f8ac579e9bad19000a02bc": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572750df5951b619008f882f": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e765ba00c9c71400d770a5": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57264865dd62a815002e8064": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5733e5a14776f4190066145b": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e1127bcd28a01900c67549": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572973ccaf94a219006aa44a": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572869b84b864d19001649b1": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e11a16cd28a01900c675b8": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5727f5622ca10214002d9a46": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57266c015951b619008f7238": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57332442d058e614000b5721": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5730cc2cb54a4f140068cc66": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572a20816aef0514001552e8": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56f8507fa6d7ea1400e1754d": {
+"pretraining": 0.0181,
+"fine-tuning": 0.0
+},
+"57299326af94a219006aa518": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726a00d708984140094cc28": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57302e45947a6a140053d22f": {
+"pretraining": 0.0074,
+"fine-tuning": 0.0
+},
+"57111992b654c5140001fb46": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e0c2307aa994140058e6e0": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572827fc3acd2414000df5bd": {
+"pretraining": 0.49,
+"fine-tuning": 0.0
+},
+"57273a465951b619008f8702": {
+"pretraining": 0.7412,
+"fine-tuning": 0.0
+},
+"56d7253b0d65d214001983d5": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56d6f2000d65d2140019827e": {
+"pretraining": 0.0,
+"fine-tuning": 0.0041
+},
+"5728ebcb3acd2414000e01d9": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57269e8a5951b619008f77f8": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572fbfa504bcaa1900d76c77": {
+"pretraining": 0.0155,
+"fine-tuning": 0.0
+},
+"571c9074dd7acb1400e4c102": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5730aeba069b531400832243": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57335ddbd058e614000b5931": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572fe393947a6a140053cdbe": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5727ec062ca10214002d99b8": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572650325951b619008f6fab": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57283db6ff5b5019007d9fbd": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56d99179dc89441400fdb570": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57267ca75951b619008f746b": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56f87e95aef237190062610c": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572fac17947a6a140053cb55": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57111380a58dae1900cd6bd6": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726bc505951b619008f7c7a": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"573166ede6313a140071cef2": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572989846aef051400154fc3": {
+"pretraining": 0.0069,
+"fine-tuning": 0.0
+},
+"56d728a10d65d21400198413": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e7673a37bdd419002c3f55": {
+"pretraining": 0.038,
+"fine-tuning": 0.0
+},
+"56e10e73cd28a01900c674ed": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5737a84dc3c5551400e51f5a": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"573098f38ab72b1400f9c5d2": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56f82b25a6d7ea1400e17459": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5725b76389a1e219009abd4e": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572812eaff5b5019007d9c82": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56beb4343aeaaa14008c925c": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"571ccfbadd7acb1400e4c164": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57283dbeff5b5019007d9fca": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572835854b864d190016472f": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5728df634b864d1900164fe2": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"571a50df4faf5e1900b8a962": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5729ea263f37b319004785bf": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57273581708984140094daec": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56beb6533aeaaa14008c9290": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5729fc3d1d0469140077969f": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5727e21e4b864d1900163f36": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57267f695951b619008f74c1": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e11cedcd28a01900c675e8": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57268bf9dd62a815002e890c": {
+"pretraining": 0.0076,
+"fine-tuning": 0.0
+},
+"56e1d9fee3433e14004231cb": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726eb4b5951b619008f826c": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572a03086aef0514001551a2": {
+"pretraining": 0.0053,
+"fine-tuning": 0.0
+},
+"56bec4343aeaaa14008c93a9": {
+"pretraining": 0.0405,
+"fine-tuning": 0.0058
+},
+"571095a8a58dae1900cd6a78": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572fe92204bcaa1900d76e95": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572683e6f1498d1400e8e24e": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5727f0b1ff5b5019007d98f4": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572a058aaf94a219006aa751": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5730ea71b54a4f140068cce6": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57300a9a04bcaa1900d77064": {
+"pretraining": 0.4888,
+"fine-tuning": 0.0
+},
+"56e126dae3433e1400422c7d": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726965ef1498d1400e8e488": {
+"pretraining": 0.0077,
+"fine-tuning": 0.0
+},
+"56f897059b226e1400dd0c60": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57296d571d04691400779414": {
+"pretraining": 0.0,
+"fine-tuning": 0.0526
+},
+"56e74faf00c9c71400d76f98": {
+"pretraining": 0.6889,
+"fine-tuning": 0.0
+},
+"57285841ff5b5019007da19e": {
+"pretraining": 0.0273,
+"fine-tuning": 0.0
+},
+"56e200e4cd28a01900c67c17": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5727d9c43acd2414000dee18": {
+"pretraining": 0.0136,
+"fine-tuning": 0.0
+},
+"5737a4511c456719005744df": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5733dd4f4776f419006613aa": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726b9e15951b619008f7bf1": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"573085ea8ab72b1400f9c54d": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57274beff1498d1400e8f5e5": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572821ceff5b5019007d9db4": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e1a38de3433e140042305c": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56d9c551dc89441400fdb7d3": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572686ac5951b619008f75a9": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5711475ca58dae1900cd6d8a": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572927d06aef051400154ae1": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e10aa5cd28a01900c674b5": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572faf74b2c2fd140056834a": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5710e8c8a58dae1900cd6b29": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5733638fd058e614000b59ec": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726a340dd62a815002e8bbc": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56dfa3394a1a83140091ebfd": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e10412e3433e1400422abc": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726e313f1498d1400e8eeb6": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56beb7953aeaaa14008c92af": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572920d73f37b31900478056": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57290ee2af94a219006aa002": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"570d47b8b3d812140066d630": {
+"pretraining": 0.0833,
+"fine-tuning": 0.0
+},
+"56beca913aeaaa14008c946e": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57268109f1498d1400e8e1fa": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5729544c3f37b31900478258": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5730cb0fb7151e1900c0154b": {
+"pretraining": 0.0061,
+"fine-tuning": 0.0
+},
+"5733a1854776f41900660f0b": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572a2224af94a219006aa824": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57111b95a58dae1900cd6c52": {
+"pretraining": 0.0046,
+"fine-tuning": 0.0
+},
+"5710f2e2a58dae1900cd6b74": {
+"pretraining": 0.006,
+"fine-tuning": 0.0
+},
+"572ff760b2c2fd1400568679": {
+"pretraining": 0.0103,
+"fine-tuning": 0.0
+},
+"5711651050c2381900b54ace": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726eb8bf1498d1400e8efe6": {
+"pretraining": 0.0682,
+"fine-tuning": 0.0
+},
+"56beb97c3aeaaa14008c92db": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726e9c65951b619008f824b": {
+"pretraining": 0.0079,
+"fine-tuning": 0.0
+},
+"56e1b355e3433e14004230b0": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726a21bf1498d1400e8e578": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5727d4922ca10214002d977e": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57296f3caf94a219006aa3fc": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572808bf4b864d190016429a": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5730a40f396df91900096237": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572a1fe16aef0514001552d3": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726847f708984140094c8ab": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57286ead2ca10214002da349": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57297547af94a219006aa45e": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5728177f2ca10214002d9db0": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5725ee6438643c19005aceb5": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"573361404776f4190066093e": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57265e11708984140094c3be": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57274e0d708984140094dbe5": {
+"pretraining": 0.9879,
+"fine-tuning": 0.0
+},
+"5726deed5951b619008f80c6": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5729f1c13f37b319004785ea": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572831512ca10214002da04c": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572961f61d04691400779359": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e11e57e3433e1400422c28": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572847ff3acd2414000df869": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572f6ec7a23a5019007fc624": {
+"pretraining": 0.0072,
+"fine-tuning": 0.0
+},
+"5726385e271a42140099d799": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57268e2bf1498d1400e8e3b2": {
+"pretraining": 0.0565,
+"fine-tuning": 0.0
+},
+"571c8539dd7acb1400e4c0e4": {
+"pretraining": 0.1181,
+"fine-tuning": 0.0
+},
+"572fdbb004bcaa1900d76ddc": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57339eb9d058e614000b5efa": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57281a952ca10214002d9deb": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57265285708984140094c25d": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5729f4273f37b319004785ff": {
+"pretraining": 0.0452,
+"fine-tuning": 0.0
+},
+"570d2417fed7b91900d45c41": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56ddde6b9a695914005b9628": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56d70d240d65d21400198326": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57296eee6aef051400154e90": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e75e4500c9c71400d7702e": {
+"pretraining": 0.5408,
+"fine-tuning": 0.0
+},
+"56bf48cc3aeaaa14008c95ae": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56bf34293aeaaa14008c9559": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726fe95dd62a815002e9736": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56f80ad1a6d7ea1400e1739d": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56f8cc399e9bad19000a0517": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5729fb003f37b31900478628": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57297bc9af94a219006aa4c7": {
+"pretraining": 0.013,
+"fine-tuning": 0.0
+},
+"5729e38daf94a219006aa69e": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"571117d4a58dae1900cd6c0d": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57270541dd62a815002e97c8": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57107a3ea58dae1900cd69df": {
+"pretraining": 0.0167,
+"fine-tuning": 0.0
+},
+"56f8c7029e9bad19000a04a3": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726ed12708984140094d645": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56f87760aef23719006260d0": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572814882ca10214002d9d72": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572a0d21af94a219006aa785": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56dfb5f5231d4119001abcb6": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5730c737b54a4f140068cc55": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"571cc5c45efbb31900334dda": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57283e652ca10214002da16a": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57274ca8dd62a815002e9aa8": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5728dafe3acd2414000e005d": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5725c743ec44d21400f3d54a": {
+"pretraining": 0.0293,
+"fine-tuning": 0.0
+},
+"56bec5233aeaaa14008c93d0": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57296e43af94a219006aa3e5": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5728223cff5b5019007d9dc6": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5727d1c93acd2414000ded3f": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57060a1175f01819005e78d3": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5729edd56aef051400155116": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"570d418dfed7b91900d45dbf": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5733fb7bd058e614000b6700": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56bf10f43aeaaa14008c9501": {
+"pretraining": 0.0,
+"fine-tuning": 0.0047
+},
+"56e0bb9f7aa994140058e6cc": {
+"pretraining": 0.2331,
+"fine-tuning": 0.0
+},
+"5727580bf1498d1400e8f69c": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57272ff2708984140094dabd": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"571c8eb9dd7acb1400e4c0f8": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572fdd03a23a5019007fca9e": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56f7e9caaef2371900625c58": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e0fe85e3433e1400422a6c": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572a14af3f37b319004786c3": {
+"pretraining": 0.0921,
+"fine-tuning": 0.0
+},
+"57266e72f1498d1400e8df8e": {
+"pretraining": 0.0045,
+"fine-tuning": 0.0
+},
+"572864542ca10214002da2de": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56f8575aaef2371900625fff": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5725d403ec44d21400f3d65d": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e202e9e3433e1400423240": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"573776eec3c5551400e51eea": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572822233acd2414000df555": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726c7a85951b619008f7dde": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57280cac2ca10214002d9ca8": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"571cd88ddd7acb1400e4c18e": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5727f16c3acd2414000df05c": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726a0205951b619008f781d": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57274a1edd62a815002e9a9e": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"573099ee8ab72b1400f9c5dd": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726400589a1e219009ac5f1": {
+"pretraining": 0.9964,
+"fine-tuning": 0.0
+},
+"57273a0d708984140094db10": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57267383dd62a815002e8556": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5733a5f54776f41900660f45": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572a096e6aef0514001551e4": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726241189a1e219009ac2e2": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56f7ef96aef2371900625c77": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57286bf84b864d19001649d3": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e7591b00c9c71400d76fee": {
+"pretraining": 0.5845,
+"fine-tuning": 0.0
+},
+"57274b35f1498d1400e8f5d5": {
+"pretraining": 0.0093,
+"fine-tuning": 0.0
+},
+"571c7abfdd7acb1400e4c0bb": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57265746dd62a815002e821b": {
+"pretraining": 0.9928,
+"fine-tuning": 0.0
+},
+"56e1075ae3433e1400422afa": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572a0a391d046914007796e1": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572ffb02b2c2fd14005686b8": {
+"pretraining": 0.36,
+"fine-tuning": 0.0
+},
+"572655e5f1498d1400e8dc60": {
+"pretraining": 0.9176,
+"fine-tuning": 0.0
+},
+"572669a9dd62a815002e841a": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5730c8a1f6cb411900e244a0": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5729feaf6aef05140015518b": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5725bcb6271a42140099d0ef": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e1ce08e3433e14004231a6": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57268739708984140094c8f1": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56f8225ea6d7ea1400e173f4": {
+"pretraining": 0.0087,
+"fine-tuning": 0.0
+},
+"57114e8d50c2381900b54a5e": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5725cfd0271a42140099d229": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5727780a5951b619008f8aa0": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56d20564e7d4791d00902612": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57373d0cc3c5551400e51e85": {
+"pretraining": 0.0357,
+"fine-tuning": 0.0
+},
+"57280e323acd2414000df34c": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e12005cd28a01900c6761a": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57268a37f1498d1400e8e33d": {
+"pretraining": 0.8429,
+"fine-tuning": 0.0
+},
+"56e08aa0231d4119001ac29d": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57335c20d058e614000b58f9": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e10f14e3433e1400422b5f": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e05900231d4119001ac051": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56d729180d65d21400198428": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57276a8f5951b619008f8996": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5725d94bec44d21400f3d69b": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572849b4ff5b5019007da0f3": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57268066708984140094c821": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"573368044776f41900660a2d": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56dfad0a7aa994140058dfca": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5725e44238643c19005ace38": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5737958b1c456719005744c4": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57283f014b864d19001647ea": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572903d96aef0514001549a4": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56f7c8aba6d7ea1400e1727e": {
+"pretraining": 0.1972,
+"fine-tuning": 0.0
+},
+"57264cfa708984140094c1c7": {
+"pretraining": 0.7023,
+"fine-tuning": 0.0
+},
+"57309446396df919000961bc": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57340d124776f419006617bf": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572742bd5951b619008f8788": {
+"pretraining": 0.7879,
+"fine-tuning": 0.0
+},
+"56de4a89cffd8e1900b4b7bd": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572fffb1b2c2fd14005686fb": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726e1fcdd62a815002e93c8": {
+"pretraining": 0.0091,
+"fine-tuning": 0.0
+},
+"5726ace8dd62a815002e8c9f": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726b0985951b619008f7a93": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572ff07304bcaa1900d76ef5": {
+"pretraining": 0.3279,
+"fine-tuning": 0.0
+},
+"570d2556fed7b91900d45c49": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57283b91ff5b5019007d9fa6": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5710ed7bb654c5140001fa2c": {
+"pretraining": 0.0033,
+"fine-tuning": 0.0
+},
+"5726f8abf1498d1400e8f168": {
+"pretraining": 0.035,
+"fine-tuning": 0.0
+},
+"572671a5f1498d1400e8dfe4": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5727f746ff5b5019007d9961": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56d9b389dc89441400fdb6f0": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572812142ca10214002d9d2b": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57285ed5ff5b5019007da1ba": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572ff890a23a5019007fcbd0": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572826762ca10214002d9f2f": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5729f5a03f37b31900478607": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726534d708984140094c26f": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57265a58dd62a815002e8270": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5725f16f89a1e219009ac0cd": {
+"pretraining": 0.1618,
+"fine-tuning": 0.0
+},
+"573093598ab72b1400f9c5b1": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572fbea404bcaa1900d76c5b": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572f7b33947a6a140053c9a3": {
+"pretraining": 0.4067,
+"fine-tuning": 0.0
+},
+"5728dab94b864d1900164f9a": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5730b07c8ab72b1400f9c696": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57300c67947a6a140053cff2": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"571099b2b654c5140001f9b7": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5730a951069b531400832216": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572863363acd2414000df985": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5729729a1d0469140077948f": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56bf38383aeaaa14008c956d": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726e06df1498d1400e8ee53": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"571077ecb654c5140001f909": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572a0a686aef0514001551f0": {
+"pretraining": 0.0235,
+"fine-tuning": 0.0
+},
+"56f84760aef2371900625f84": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57274126dd62a815002e9a25": {
+"pretraining": 0.0059,
+"fine-tuning": 0.0
+},
+"57291fb4af94a219006aa0b1": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56de16ca4396321400ee25c6": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5725dc1638643c19005ace03": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56bec1823aeaaa14008c9364": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56f8b7189e9bad19000a038d": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56bf23363aeaaa14008c9531": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5733faaf4776f41900661632": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726b6e05951b619008f7b99": {
+"pretraining": 0.0173,
+"fine-tuning": 0.0
+},
+"57108ee6a58dae1900cd6a1b": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572810ec2ca10214002d9d09": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5728facd4b864d1900165173": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"571c91c8dd7acb1400e4c10c": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57299d1c1d04691400779584": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726a9ed5951b619008f7969": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e1dc62cd28a01900c67bca": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572f6c85947a6a140053c944": {
+"pretraining": 0.3485,
+"fine-tuning": 0.0
+},
+"57377aac1c4567190057447c": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572ffe6fb2c2fd14005686f1": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57286c8cff5b5019007da21a": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57266dd4f1498d1400e8df7c": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572872822ca10214002da377": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572867543acd2414000df9a2": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e10043e3433e1400422a85": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e0f32d231d4119001ac4c8": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5728eb1a3acd2414000e01c7": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726a00cf1498d1400e8e550": {
+"pretraining": 0.0077,
+"fine-tuning": 0.0
+},
+"5726bf325951b619008f7cfd": {
+"pretraining": 0.0032,
+"fine-tuning": 0.0
+},
+"57275273dd62a815002e9b19": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56f85bb8aef2371900626011": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572a02483f37b3190047864c": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5710eca0a58dae1900cd6b3c": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56f82549a6d7ea1400e17416": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57115b2850c2381900b54a80": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56f8ce779b226e1400dd103d": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e759bb00c9c71400d77001": {
+"pretraining": 0.5667,
+"fine-tuning": 0.0
+},
+"5729f06f1d04691400779675": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57295b5b1d04691400779316": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572659535951b619008f7041": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5729e500af94a219006aa6b5": {
+"pretraining": 0.0128,
+"fine-tuning": 0.0128
+},
+"56de1563cffd8e1900b4b5c2": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572867d72ca10214002da2fc": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5729f3831d0469140077967c": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572909ebaf94a219006a9fc8": {
+"pretraining": 0.3274,
+"fine-tuning": 0.0
+},
+"5725c604271a42140099d185": {
+"pretraining": 0.1754,
+"fine-tuning": 0.0
+},
+"56d9cd9adc89441400fdb84c": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5728759cff5b5019007da25e": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57268c01dd62a815002e8913": {
+"pretraining": 0.951,
+"fine-tuning": 0.0
+},
+"572671165951b619008f72b8": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57263fd138643c19005ad37e": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572882242ca10214002da421": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5725ea6889a1e219009ac09e": {
+"pretraining": 0.4978,
+"fine-tuning": 0.0
+},
+"572800b03acd2414000df1f4": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56de10b44396321400ee2593": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"570d50a5fed7b91900d45e7d": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5705fec152bb89140068977b": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e7667e37bdd419002c3f4c": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e76b8337bdd419002c3f7f": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56dfb666231d4119001abcc0": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572918bd3f37b31900478015": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572fc49d04bcaa1900d76ccc": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5725d8a3271a42140099d291": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572976791d046914007794b2": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572756265951b619008f886f": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572966ebaf94a219006aa391": {
+"pretraining": 0.0038,
+"fine-tuning": 0.0
+},
+"5730982f396df919000961e2": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5729f1fcaf94a219006aa6d7": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57268d1b708984140094c9cd": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e0fa5b7aa994140058e85a": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57274a8ff1498d1400e8f5bc": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726431d271a42140099d7f9": {
+"pretraining": 0.9951,
+"fine-tuning": 0.0
+},
+"57296bf96aef051400154e52": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5725d0e3271a42140099d236": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57111713a58dae1900cd6c04": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57300761947a6a140053cf9d": {
+"pretraining": 0.125,
+"fine-tuning": 0.0
+},
+"56f81537aef2371900625db7": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56bebc383aeaaa14008c931f": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5728d63c4b864d1900164f1c": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572768d9708984140094dd16": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572853e8ff5b5019007da18a": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56de1645cffd8e1900b4b5d1": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726e5ac708984140094d51b": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e1011ecd28a01900c6740e": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57281d494b864d19001644be": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"571090abb654c5140001f999": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57272dd55951b619008f8699": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5727dd2e4b864d1900163ebc": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572663a9f1498d1400e8ddf5": {
+"pretraining": 0.9218,
+"fine-tuning": 0.0
+},
+"57286010ff5b5019007da1cc": {
+"pretraining": 0.0046,
+"fine-tuning": 0.0
+},
+"56bf41013aeaaa14008c959c": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5727c94bff5b5019007d954a": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e0d54a7aa994140058e76b": {
+"pretraining": 0.1011,
+"fine-tuning": 0.0
+},
+"572fc6f204bcaa1900d76cf6": {
+"pretraining": 0.0073,
+"fine-tuning": 0.0
+},
+"56f85e71a6d7ea1400e175c7": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5728103eff5b5019007d9c30": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572746addd62a815002e9a5e": {
+"pretraining": 0.0077,
+"fine-tuning": 0.0
+},
+"57264d58f1498d1400e8db7b": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57294279af94a219006aa20c": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e108abe3433e1400422b0d": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"570953a7efce8f15003a7e01": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e1c3e1e3433e1400423148": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5729f4e46aef051400155158": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e1c7e2cd28a01900c67b76": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5729582b1d046914007792e7": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572982e76aef051400154f96": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57274f07708984140094dbed": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5733314e4776f4190066076a": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572ffbaa947a6a140053cee9": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56f86966aef2371900626055": {
+"pretraining": 0.0039,
+"fine-tuning": 0.0
+},
+"5727490bdd62a815002e9a82": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56bf6f743aeaaa14008c9631": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57274a8cf1498d1400e8f5b7": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5733f9fa4776f41900661620": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572995d46aef051400154fea": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56d7261e0d65d214001983e0": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57108073b654c5140001f925": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e1efa0e3433e140042321d": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5737432bc3c5551400e51e9a": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5727492f708984140094dbb7": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57373a9fc3c5551400e51e7c": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57097d63ed30961900e84200": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5729506d6aef051400154cad": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57096505ed30961900e84084": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726bdc6f1498d1400e8e9c4": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5730b776069b5314008322be": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572751b4708984140094dc1f": {
+"pretraining": 0.9938,
+"fine-tuning": 0.0
+},
+"57299c2c6aef051400155024": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"571126dfa58dae1900cd6cb4": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57115ff82419e314009555c5": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57281bb84b864d190016449b": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5733fc6ed058e614000b670f": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726356938643c19005ad2ff": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572a070c6aef0514001551ca": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5729e4291d04691400779651": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57273dbbf1498d1400e8f509": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5705eee952bb8914006896e2": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57273cca708984140094db37": {
+"pretraining": 0.4656,
+"fine-tuning": 0.0
+},
+"572965e73f37b3190047832e": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57266a15f1498d1400e8def8": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57286ec63acd2414000df9d4": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5711619950c2381900b54ab1": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57276166dd62a815002e9bd8": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56beafca3aeaaa14008c9207": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e1262fcd28a01900c67656": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56d98a59dc89441400fdb52b": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57264c42dd62a815002e80c8": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57114667a58dae1900cd6d82": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5725e28f38643c19005ace26": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572977fbaf94a219006aa4af": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e1239acd28a01900c67642": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56f826a7a6d7ea1400e1742a": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57266cc9f1498d1400e8df53": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e11161e3433e1400422b87": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57283d173acd2414000df790": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572815d9ff5b5019007d9cbf": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56f8541da6d7ea1400e1757b": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e111e5e3433e1400422b90": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56bec0dd3aeaaa14008c9357": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5730909d8ab72b1400f9c58c": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56df9e2838dc4217001520f9": {
+"pretraining": 0.1765,
+"fine-tuning": 0.0
+},
+"57268527708984140094c8bf": {
+"pretraining": 0.7778,
+"fine-tuning": 0.0
+},
+"571156152419e3140095559c": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e1b8f3e3433e14004230e7": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"571a4d1a4faf5e1900b8a958": {
+"pretraining": 0.0721,
+"fine-tuning": 0.0
+},
+"5737804dc3c5551400e51f13": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56d9c92bdc89441400fdb811": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5725cf3238643c19005acd64": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56d9ccacdc89441400fdb846": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5727623a5951b619008f8921": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572fb059947a6a140053cb81": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56de3d594396321400ee26cb": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5727ee372ca10214002d99f0": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726a46cdd62a815002e8bd0": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5727aec03acd2414000de991": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572951f16aef051400154cce": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5737534ec3c5551400e51ead": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57269260dd62a815002e89eb": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"572fda6fb2c2fd140056850b": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5726a9ff708984140094cd4f": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5727f8342ca10214002d9a7e": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5730c52fb54a4f140068cc46": {
+"pretraining": 0.0133,
+"fine-tuning": 0.0044
+},
+"5729f0db6aef051400155127": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56f8a6969e9bad19000a025d": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"5728e8212ca10214002daa6c": {
+"pretraining": 0.314,
+"fine-tuning": 0.0
+},
+"5728fc9e1d04691400778f15": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"56e0d6cf231d4119001ac422": {
+"pretraining": 0.0,
+"fine-tuning": 0.0
+},
+"57274e975951b619008f87f9": {
+"pretraining": 0.9882,
+"fine-tuning": 0.0
+}
+}
