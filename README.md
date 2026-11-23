@@ -12,6 +12,37 @@ Everything is written by hand in Python and PyTorch: the byte-level BPE tokenize
 
 I explain how it works, step by step and with every number measured on this model, in the series **Inside a ChatGPT**: [on the web](https://dedezza1d.github.io/inside-a-chatgpt/) and as a [LinkedIn newsletter](https://www.linkedin.com/newsletters/inside-a-chatgpt-7528472821451268096/).
 
+## Try it
+
+These steps download the published models, reproduce the numbers from the series and open a chat with the model. They need [git](https://git-scm.com/downloads) and [uv](https://docs.astral.sh/uv/getting-started/installation/); no GitHub account and no GPU. The commands are the same in a Linux or macOS terminal and in Windows PowerShell.
+
+```bash
+git clone https://github.com/dedezza1D/pocketchat.git
+cd pocketchat
+uv sync
+uv run python scripts/download_weights.py all
+```
+
+`uv sync` installs Python packages, PyTorch included, into `.venv` (about 4.5 GB on Windows and Linux, which get the CUDA build). The two models are 120 MB each.
+
+The chance of each next word, as in the tables of the series:
+
+```bash
+uv run python scripts/next_word.py --prompt "Water is made of hydrogen and" --word table
+uv run python scripts/next_word.py --prompt "Water is made of hydrogen and" --temperature 0.5
+uv run python scripts/next_word.py --ckpt checkpoints/sft_reinit.pt --prompt "Water is made of hydrogen and"
+```
+
+The first gives oxygen 52.9% and table 0.00011% (Part 0), the second oxygen 96.4% (Part 1), and the third oxygen 28.8% after chat fine-tuning (Part 2). Special tokens can be written in the prompt: `--prompt "<|user|>What is water made of?<|end|><|assistant|>Water is made of hydrogen and oxygen." --word "<|end|>"` gives 21.9% with the chat model.
+
+A chat in the terminal (`/reset` starts over, `/quit` leaves):
+
+```bash
+uv run python scripts/chat.py
+```
+
+Each run draws different answers; on a CPU, each takes a few seconds. With `--seed`, the same conversation gets the same answers on the same machine. The answers quoted in Part 2 are in `evals/sft_reinit.md`; they were drawn with seed 1337 on an RTX 4060, so `--seed 1337` gives them again for a first question on that GPU ("Why is the sky blue?" → "The sky blue is blue because of the color green."). On a CPU or another GPU, the sampling and the bf16 arithmetic differ, and the same seed gives other answers.
+
 ## Pipeline
 
 1. **Corpus**: English educational web text streamed from [FineWeb-Edu](https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu) (ODC-By).
@@ -85,25 +116,24 @@ Both models can be used without training:
 - **Pretrained** (step 15,000, before chat fine-tuning), MIT License: [v0.1.0](https://github.com/dedezza1D/pocketchat/releases/tag/v0.1.0).
 
   ```bash
-  gh release download v0.1.0 --repo dedezza1D/pocketchat --pattern pretrain_final.pt --dir checkpoints
-  gh release download v0.1.0 --repo dedezza1D/pocketchat --pattern tokenizer_full.json --dir data --skip-existing
+  uv run python scripts/download_weights.py pretrained
   uv run python scripts/sample.py --prompt "Water is made of hydrogen and" --seed 0
   ```
 
 - **Chat** (fine-tuned, chat-token rows reinitialized), [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) because of the Dolly 15k data: [v0.2.0](https://github.com/dedezza1D/pocketchat/releases/tag/v0.2.0).
 
   ```bash
-  gh release download v0.2.0 --repo dedezza1D/pocketchat --pattern sft_reinit.pt --dir checkpoints
-  gh release download v0.2.0 --repo dedezza1D/pocketchat --pattern tokenizer_full.json --dir data --skip-existing
+  uv run python scripts/download_weights.py chat
   uv run python scripts/chat.py --ckpt checkpoints/sft_reinit.pt
   ```
 
-Both releases ship the same `tokenizer_full.json`, so `--skip-existing` keeps the copy you already have.
+`download_weights.py` takes the files from the release pages above, with no GitHub account, and checks their SHA-256. It writes the model to `checkpoints/` and the tokenizer both releases share to `data/tokenizer_full.json`, and keeps files that are already there.
 
 ## Quick start
 
+Training a small model from scratch, after the clone and `uv sync` from [Try it](#try-it):
+
 ```bash
-uv sync
 uv run pytest
 uv run python scripts/download_corpus.py --docs 5000 --out data/corpus_small.jsonl
 uv run python scripts/train_tokenizer.py --corpus data/corpus_small.jsonl --docs 5000
@@ -112,7 +142,15 @@ uv run python scripts/pretrain.py --max-steps 300 --out checkpoints/smoke.pt
 uv run python scripts/sample.py --ckpt checkpoints/smoke_final.pt --prompt "The water cycle" --seed 0
 ```
 
-Full run (download, tokenizer, tokenization and pretraining, resumable; writes `checkpoints/pretrain_final.pt`):
+On an RTX 4060, the tests take about 1 minute, the download 45 seconds, the tokenizer and tokenization 45 seconds together, and pretraining about 7 minutes; the samples are recognizable English that does not make sense yet. The steps write about 0.6 GB: 36 MB of data, `smoke.pt` and `smoke_final.pt` (120 MB each, the best and the last step) and `smoke.last.pt` (360 MB, which also holds the optimizer state so that `--resume` can continue the run). The download prints a notice about unauthenticated requests to the Hugging Face Hub; no account is needed.
+
+On a CPU, the 300 steps above take hours. A shorter run takes about 12 minutes on a 16-thread laptop CPU and already produces words, though not sentences:
+
+```bash
+uv run python scripts/pretrain.py --max-steps 200 --batch-size 4 --grad-accum 1 --out checkpoints/smoke.pt
+```
+
+Full run (download, tokenizer, tokenization and pretraining, resumable; writes `checkpoints/pretrain_final.pt`). On an RTX 4060 it takes about 4 hours of pretraining plus the download of 400,000 documents, and writes about 3 GB of data (`data/corpus.jsonl`, 1.9 GB; `data/full/train.bin`, 0.97 GB) and 0.6 GB of checkpoints. If `data/tokenizer_full.json` is already there, for example from `download_weights.py`, the run uses it instead of training a new tokenizer:
 
 ```bash
 uv run python scripts/run_full.py
