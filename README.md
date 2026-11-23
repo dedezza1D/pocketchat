@@ -126,7 +126,7 @@ uv run python scripts/evaluate.py --ckpt checkpoints/pretrain_final.pt checkpoin
 uv run python scripts/chat.py --ckpt checkpoints/sft_reinit.pt
 ```
 
-`uv sync` installs the CUDA build of PyTorch; the CI runs the tests on the CPU build.
+On Windows and Linux, `uv sync` installs the CUDA build of PyTorch, which also runs on machines without an NVIDIA GPU. On macOS (Apple Silicon), it installs the standard build from PyPI and everything runs on the CPU; PyTorch no longer publishes builds for Intel Macs. The CI runs the tests on Linux (CPU build) and macOS.
 
 ## License
 
