@@ -14,6 +14,10 @@ from datasets import load_dataset
 from tqdm import tqdm
 
 
+# the dataset revision the published model was trained on; datasets on the Hub can change
+FINEWEB_EDU_REVISION = "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9"
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--docs", type=int, default=5000)
@@ -21,7 +25,8 @@ def main() -> None:
     ap.add_argument("--min-chars", type=int, default=200)
     args = ap.parse_args()
 
-    ds = load_dataset("HuggingFaceFW/fineweb-edu", name="sample-10BT", split="train", streaming=True)
+    ds = load_dataset("HuggingFaceFW/fineweb-edu", name="sample-10BT", split="train", streaming=True,
+                      revision=FINEWEB_EDU_REVISION)
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
     written = chars = 0

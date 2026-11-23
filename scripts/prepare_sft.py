@@ -20,10 +20,15 @@ from pocketchat.chat_format import encode_conversation, to_example
 from pocketchat.tokenizer import BPETokenizer
 
 
+# the dataset revisions the published chat model was trained on; datasets on the Hub can change
+OASST1_REVISION = "fdf72ae0827c1cda404aff25b6603abec9e3399b"
+DOLLY_REVISION = "bdd27f4d94b9c1f951818a7da7fd7aeea5dbff1a"
+
+
 def oasst_conversations(max_turns: int) -> list[list[tuple[str, str]]]:
     rows = []
     for split in ("train", "validation"):
-        rows += list(load_dataset("OpenAssistant/oasst1", split=split))
+        rows += list(load_dataset("OpenAssistant/oasst1", split=split, revision=OASST1_REVISION))
     msgs = {r["message_id"]: r for r in rows if r["lang"] == "en" and not r["deleted"]}
     children = defaultdict(list)
     for r in msgs.values():
@@ -56,7 +61,7 @@ def oasst_conversations(max_turns: int) -> list[list[tuple[str, str]]]:
 
 def dolly_conversations() -> list[list[tuple[str, str]]]:
     convos = []
-    for r in load_dataset("databricks/databricks-dolly-15k", split="train"):
+    for r in load_dataset("databricks/databricks-dolly-15k", split="train", revision=DOLLY_REVISION):
         user = r["instruction"].strip()
         if r["context"].strip():
             user += "\n\n" + r["context"].strip()

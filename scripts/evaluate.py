@@ -12,6 +12,7 @@ from pathlib import Path
 
 import torch
 
+from pocketchat.checkpoint import check_data_tokenizer
 from pocketchat.data import TokenStream
 from pocketchat.evaluation import validation_loss
 from pocketchat.model import GPT, GPTConfig
@@ -31,6 +32,8 @@ def main() -> None:
         config = state.get("config") or torch.load(args.config_from, map_location="cpu")["config"]
         model = GPT(GPTConfig(**config)).to(device)
         model.load_state_dict(state["model"])
+        if not check_data_tokenizer(state, args.data_dir):
+            print(f"warning: cannot check that {path} and {args.data_dir} use the same tokenizer")
         val = TokenStream(Path(args.data_dir) / "val.bin", model.cfg.seq_len)
         loss = validation_loss(model, val, args.batch_size, device)
         print(

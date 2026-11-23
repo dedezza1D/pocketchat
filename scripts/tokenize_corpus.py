@@ -14,6 +14,7 @@ from pathlib import Path
 import numpy as np
 from tqdm import tqdm
 
+from pocketchat.checkpoint import write_data_record
 from pocketchat.data import write_tokens
 from pocketchat.tokenizer import BPETokenizer
 
@@ -56,6 +57,7 @@ def main() -> None:
         ids = np.concatenate(arrays)
         write_tokens(Path(args.out_dir) / f"{name}.bin", ids)
         print(f"{name}: {len(arrays)} docs, {len(ids) / 1e6:.2f}M tokens")
+    write_data_record(args.out_dir, args.tokenizer)
 
 
 if __name__ == "__main__":
