@@ -1,5 +1,6 @@
 """Tests for the parts that are easy to get wrong without noticing: BPE training, sampling,
-resuming, schedules, the fine-tuning batches and loss, RoPE, data helpers and the chat history."""
+resuming, schedules, the fine-tuning batches and loss, RoPE, data helpers, the chat history and
+the scripts readers use to get the weights and reproduce the numbers in the blog series."""
 
 import os
 import random
@@ -30,6 +31,8 @@ if "datasets" not in sys.modules:
 
 import chat  # noqa: E402
 import check_eval_overlap  # noqa: E402
+import download_weights  # noqa: E402
+import next_word  # noqa: E402
 import prepare_sft  # noqa: E402
 import sft  # noqa: E402
 from pretrain import lr_at  # noqa: E402
@@ -287,3 +290,79 @@ def test_evaluation_data_must_use_the_checkpoint_tokenizer(tmp_path):
     write_data_record(tmp_path, tmp_path / "b.json")
     with pytest.raises(ValueError, match="tokenized with"):
         check_data_tokenizer(state, tmp_path)
+
+
+# next_word.py and chat.py --seed -------------------------------------------------------------------
+def test_next_word_chances_follow_softmax_temperature_and_the_chain_rule():
+    tok = chat_tokenizer()
+    model = tiny_gpt(tok.vocab_size)
+    ids = tok.encode("Water is made of hydrogen and")
+    scores = next_word.next_token_scores(model, ids)
+    assert scores.shape == (tok.vocab_size,)
+
+    oxygen = next_word.word_ids(tok, "oxygen")
+    assert oxygen == tok.encode(" oxygen") and next_word.word_ids(tok, " oxygen") == oxygen
+    assert next_word.word_ids(tok, "<|end|>") == [tok.special_tokens["<|end|>"]]
+
+    first = oxygen[0]
+    for t in (1.0, 0.5):
+        expected = F.softmax(scores / t, dim=-1)[first].item()
+        assert next_word.word_chance(model, ids, [first], temperature=t) == pytest.approx(expected)
+
+    two = tok.encode(" oxygen.")
+    assert len(two) > 1
+    by_hand = 1.0
+    for i, t in enumerate(two):
+        by_hand *= F.softmax(next_word.next_token_scores(model, ids + two[:i]), dim=-1)[t].item()
+    assert next_word.word_chance(model, ids, two) == pytest.approx(by_hand)
+
+
+def test_next_word_reads_special_tokens_in_the_prompt_and_keeps_the_last_seq_len_tokens():
+    tok = chat_tokenizer()
+    model = tiny_gpt(tok.vocab_size, seq_len=8)
+    ids = tok.encode("<|user|>What is water made of?<|end|><|assistant|>")
+    assert tok.special_tokens["<|assistant|>"] in ids
+    long = tok.encode(TEXT)[:40]
+    assert torch.equal(next_word.next_token_scores(model, long), next_word.next_token_scores(model, long[-8:]))
+
+
+def test_percent_keeps_two_significant_digits_for_small_chances():
+    assert next_word.percent(0.529) == "52.9%"
+    assert next_word.percent(0.0084) == "0.84%"
+    assert next_word.percent(1.1e-6) == "0.00011%"
+    assert next_word.percent(3.2e-10) == "0.000000032%"
+    assert next_word.percent(0.0) == "0%"
+
+
+def test_seeded_chat_replies_repeat_and_unseeded_ones_vary():
+    tok = chat_tokenizer()
+    model = tiny_gpt(tok.vocab_size, seq_len=64)
+    turns = [("user", "What is water made of?")]
+    kw = dict(device="cpu", max_new=12, temperature=1.0, top_p=0.95, repetition_penalty=1.1)
+    assert chat.reply(model, tok, turns, seed=1337, **kw) == chat.reply(model, tok, turns, seed=1337, **kw)
+    torch.manual_seed(0)
+    unseeded = {chat.reply(model, tok, turns, **kw) for _ in range(5)}
+    assert len(unseeded) > 1
+
+
+def test_weights_download_checks_the_hash_and_never_overwrites_another_file(tmp_path):
+    import hashlib
+    src = tmp_path / "release" / "model.pt"
+    src.parent.mkdir()
+    src.write_bytes(b"weights")
+    url, digest = src.as_uri(), hashlib.sha256(b"weights").hexdigest()
+    dest = tmp_path / "checkpoints" / "model.pt"
+
+    assert download_weights.fetch(url, dest, digest) == "downloaded"
+    assert dest.read_bytes() == b"weights"
+    assert download_weights.fetch(url, dest, digest) == "already there"
+
+    dest.write_bytes(b"my own model")
+    with pytest.raises(SystemExit, match="not the published file"):
+        download_weights.fetch(url, dest, digest)
+    assert dest.read_bytes() == b"my own model"
+
+    other = tmp_path / "checkpoints" / "other.pt"
+    with pytest.raises(SystemExit, match="did not match"):
+        download_weights.fetch(url, other, "0" * 64)
+    assert not other.exists() and not other.with_name("other.pt.part").exists()
