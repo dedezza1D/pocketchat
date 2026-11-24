@@ -441,3 +441,22 @@ def test_qa_report_splits_scores_by_pretraining_overlap():
     copies = report_qa.group_scores(answers, shares, "open", 0.5, 1.01)
     assert copies["n"] == 2 and copies["f1"] == pytest.approx(0.25) and copies["contains"] == pytest.approx(0.5)
     assert report_qa.group_scores(answers, shares, "closed", 0.5, 1.01) == {"n": 0}
+
+
+def test_reading_data_answers_with_the_short_span_and_holds_out_whole_articles():
+    import prepare_qa_sft as pq
+    tok = chat_tokenizer()
+    rows = [{"title": f"T{i % 6}", "question": "What is water made of?", "context": "Water is made of hydrogen and oxygen.",
+             "answers": {"text": ["hydrogen and oxygen"]}} for i in range(12)]
+    rows.append({"title": "Long", "question": "Q?", "context": TEXT * 5, "answers": {"text": ["oxygen"]}})
+    examples = pq.squad_examples(rows, tok, max_len=128)
+    assert len(examples) == 12  # the paragraph that does not fit is dropped, not cut
+    x, y = examples[0][1]
+    trained = [t for t in y.tolist() if t != IGNORE]
+    assert tok.decode(trained[:-1]) == "hydrogen and oxygen" and trained[-1] == tok.special_tokens["<|end|>"]
+    assert "Water is made of hydrogen and oxygen." in tok.decode(x.tolist())
+    train, val, held = pq.split_by_title(examples, val_fraction=0.34, seed=0)
+    assert held == 2 and len(val) == 4 and len(train) == 8
+    val_titles = {t for t, ex in examples if any(ex is v for v in val)}
+    train_titles = {t for t, ex in examples if any(ex is v for v in train)}
+    assert val_titles and not val_titles & train_titles
