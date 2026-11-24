@@ -1,0 +1,228 @@
+{
+ "summary": {
+  "name": "sft_read",
+  "ckpt": "checkpoints/sft_read.pt",
+  "ended": 0.8333333333333334,
+  "length": 92.3,
+  "repetition": 0.05868801256354731,
+  "settings": {
+   "temperature": 0.7,
+   "top_p": 0.9,
+   "repetition_penalty": 1.1,
+   "max_new": 200,
+   "seed": 1337
+  }
+ },
+ "answers": [
+  {
+   "question": "What is the water cycle?",
+   "answer": "The water cycle is a process that involves two steps: a cycling and an cycling, which involves sending a hot coffee or tea to a fridge. The first step is to consume the coffee you want to consume, followed by the second step.\n\nThere are many ways toast the water cycle. For example, if you want to cook a hot coffee, then you can use a drink from a hot coffee bottle to start with a drink.",
+   "ended": true,
+   "length": 93,
+   "repetition": 0.03296703296703296
+  },
+  {
+   "question": "Explain photosynthesis in simple terms.",
+   "answer": "Catalysts are the energy and energy of a plant.  They are made up of three key components: photosynthesis, biomass, and biomechanics.\n\nPotentials to consume\nThe energy of food, energy, and water (videos and facts) in a plant are:\n\n1. Photosynthesis: The amount of photosynthesis that a plant can metabolize in a given time period.  This is how plants make the most of their food during the day and how they absorb the energy from the sun.\n2. Protein: The Protein is a complex and complex, complex and chemical enzyme that helps to break down the chemical chain involved in the process.\n3. Bioinformatics: The Bioinformatics is a molecular, physical, and Analytical framework for using machine learning to analyze the energy of living things.\n4. Energy:",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.04040404040404044
+  },
+  {
+   "question": "What is the capital of France?",
+   "answer": "Capital of France is the capital of France.",
+   "ended": true,
+   "length": 11,
+   "repetition": 0.0
+  },
+  {
+   "question": "Give me three tips to sleep better.",
+   "answer": "Sleep is the process of sleeping and sleeping. It involves the body of a particular kind of food, such as coffee or tea. Sleep also happens over time. It can be challenging to stay focused on your nightly sleep. It can be challenging to keep up with tasks that require attention, but it is important to keep up with the process of sleep.",
+   "ended": true,
+   "length": 75,
+   "repetition": 0.1095890410958904
+  },
+  {
+   "question": "What is a black hole?",
+   "answer": "A black hole is a mass that travels through space, and it orbits the universe, known as a black hole. The black hole's mass is calculated by calculating the length of the black hole by the formula used for black holes.",
+   "ended": true,
+   "length": 50,
+   "repetition": 0.0
+  },
+  {
+   "question": "How do vaccines work?",
+   "answer": "Consuming vaccines are typically used to protect against several types of diseases, including tick seasonal disease, tick bites and tick bite. Some vaccines work bypassing the immune system, then treating the disease with anti-allergic drugs like ibuprofen (inflammatory bowel disease), the aforementioned antibiotics.",
+   "ended": true,
+   "length": 79,
+   "repetition": 0.0
+  },
+  {
+   "question": "Write a short poem about the ocean.",
+   "answer": "I thought I could get the advice of a sea ocean, and it's an enigmatic world where one can access information and perspective.",
+   "ended": true,
+   "length": 29,
+   "repetition": 0.0
+  },
+  {
+   "question": "What is the difference between weather and climate?",
+   "answer": "Certain weather is more extreme in terms of its variability and scope. It is often described as a combination of wind, rain, and solar radiation, which is a way to determine the weather conditions of the Earth's climate. The weather patterns are typically explained by the fact that the air is warm, but also the sun and earth are not the same at all.",
+   "ended": true,
+   "length": 75,
+   "repetition": 0.0
+  },
+  {
+   "question": "Why is the sky blue?",
+   "answer": "The sky is blue because the sun and its light are all absorbed and reflected from the Earth's atmosphere. The sun has a lot of UV radiation which is a good sign of how the sun scatters the sun.",
+   "ended": true,
+   "length": 47,
+   "repetition": 0.0
+  },
+  {
+   "question": "How can I improve my writing skills?",
+   "answer": "Create a worksheet that includes three main ideas for writing and examples of how you can improve your writing skills. The first is: Write a list of all the most important elements that you want to make in your writing.\nThe second is: Write a list of all the most important elements that you want to make in your writing. For example, if you are a language model, consider a list of things you want to do in a given situation. You should use the rules and rule that you will have the most important elements in mind, such as the right balance of power, the right balance of powers, and the right balance of power. \n\nRemember, writing a list of all important elements in your writing will be challenging. It is important to note that writing a list of all the most important elements that you want to make in your writing is much easier than you would with a list of all the important elements that you need to make in your writing.",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.2777777777777778
+  },
+  {
+   "question": "What causes earthquakes?",
+   "answer": "C earthquakes can be caused by the act of earthquakes.  When an earthquake isamines caused by a sudden earthquake, the energy that is released from the earthquake is also sources of energy.  This energy can be used to create many different types of earthquakes.  The most common types of earthquakes are:\n- 1. A small number of seismic waves;  These can be very dangerous or deadly.   There are many possible types of earthquakes, but some are the most common ones.\n- 2. The earthquake is caused by a series of events that are caused by a shiftering event.  In the case of the earthquake, the earthquake can cause a shiftering event, which may result in a shiftering event.",
+   "ended": true,
+   "length": 161,
+   "repetition": 0.11949685534591192
+  },
+  {
+   "question": "Summarize the benefits of regular exercise.",
+   "answer": "Consuming regular exercise is important for overall health, for example.  It is also a good idea to eat plenty of fruits and vegetables at the same time each day.  It also helps you stay motivated and keep you healthy.  It is also good to be active and have a healthy lifestyle.  It is also an essential part of any diet.  If you are interested in healthy foods like eggs or whole milk, try these:\n\n- Eating a healthy diet: eating a high-quality diet can help you stay motivated and maintain good health.  This includes regular exercise and healthy fats.  You can also try running, biking, or hiking.  It is also good to stay hydrated by drinking water.\n\n- Lifting body weight: building strong bones and fighting off diseases.  This can help with weight loss and reduce stress.  Getting enough sleep can also help with weight loss.",
+   "ended": true,
+   "length": 194,
+   "repetition": 0.09375
+  },
+  {
+   "question": "What is machine learning?",
+   "answer": "Machine learning is the process of learning a machine that can learn and make predictions, corrects themes, and generates new results.",
+   "ended": true,
+   "length": 30,
+   "repetition": 0.0
+  },
+  {
+   "question": "How does a computer store information?",
+   "answer": "A computer store information on the physical world, its data, its modes and functions.",
+   "ended": true,
+   "length": 18,
+   "repetition": 0.0
+  },
+  {
+   "question": "What should I pack for a trip to the mountains?",
+   "answer": "Coastal mountain, which is a popular tourist destination and an easy walk, is very popular. The mountains are generally considered as a great destination for travelers. They are also known for their versatility in high altitude. There are also many stunning mountain resorts in the US that have great weather and mountains.",
+   "ended": true,
+   "length": 71,
+   "repetition": 0.0
+  },
+  {
+   "question": "Explain what inflation is.",
+   "answer": "In the United States, the inflation rate is typically 50% and 50%, depending on the price of the new money. In addition to inflation, inflation can be influenced by the price of an inventor or inventor.",
+   "ended": true,
+   "length": 50,
+   "repetition": 0.04166666666666663
+  },
+  {
+   "question": "What are the planets in the solar system?",
+   "answer": "California is the capital of California and Canada.",
+   "ended": true,
+   "length": 11,
+   "repetition": 0.0
+  },
+  {
+   "question": "How do I make a cup of tea?",
+   "answer": "Caking your cup of tea is a great way to make a cup of tea.  You can add a cup of hot coffee or tea as a topping.  Cook the tea in the evening for an hour, for 30 minutes.  After the cup has been made, cut it into smaller pieces.  Then, add some small amount of water.  Try to add the ingredients to the mixture and add the teaspoon of the tea.  Serve the tea with a baking soda.  Once the teaspoon is done, scoop up the tea and craft the tea into the tea.  In the tea you will enjoy a cup of tea.",
+   "ended": true,
+   "length": 143,
+   "repetition": 0.07092198581560283
+  },
+  {
+   "question": "What is democracy?",
+   "answer": "Conservative political systems are the law of motion, i.e. the rule of law.  The rule of law is that all decisions are made by the public and that everyone should have the power to make an impact on the world.  It is a system that is based on the government, government, and the people.  There are different types of democracy.  Some of the most common are:\n\n1. Humanity - This is an approach that emphasizes the importance of human knowledge and the importance of managing our world.  The role of this society is to make decisions that are both permanent and not present in the world.  In the sense of, there is no one right or wrong way to govern it.\n2. Constitutionalism - This is a system that is based on the Constitution, which states that it was written by President John Jordan to be a constitutional monarchy.  The Constitution is based on the Constitution and the Constitution, which states",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.101010101010101
+  },
+  {
+   "question": "Give me a few ideas for a birthday party.",
+   "answer": "Celebrate your birthday, or birthday, with a day and day.",
+   "ended": true,
+   "length": 18,
+   "repetition": 0.0625
+  },
+  {
+   "question": "Why do leaves change color in autumn?",
+   "answer": "When the leaves have a yellowish color, it's most likely that they are in autumn.  When it has a yellow or redish color, it's typically not as yellow as it should be in the year after the green color.  When the leaves have a yellow or red color, it's usually very late.  In the winter time, the leaves are yellow and the color is brown.  In the summer time, the leaves are yellow.",
+   "ended": true,
+   "length": 93,
+   "repetition": 0.18681318681318682
+  },
+  {
+   "question": "What is the role of the heart in the human body?",
+   "answer": "The role of the heart in the human body is to work towards a more healthy lifestyle. Some studies show that one third of people are able to do the same things, while 90% are not able to do the same thing. This is why it is important to work towards a more healthy lifestyle.",
+   "ended": true,
+   "length": 61,
+   "repetition": 0.15254237288135597
+  },
+  {
+   "question": "How do bees make honey?",
+   "answer": "Bees are known for their pests and pollination. Bees produce ants that they will use to grow and use theironey foraging. They also have a lovely gingerbread of the noodle for many reasons.",
+   "ended": true,
+   "length": 50,
+   "repetition": 0.0
+  },
+  {
+   "question": "What is a good way to learn a new language?",
+   "answer": "A good way to learn a new language is to start with a few simple language ideas that you can use in your language. For example, if you are writing a language that is about learning and understanding, you will need to set the time limit to start with a few words or more. For example, if you are writing a language that is about the process of learning it, you may want to take some time and effort to learn the language. You could also try using a different language, such as English, Spanish, or Italian, to help you understand the language. In addition, you could also try using a language that is more efficient than a language that is not friendly or does not exist.",
+   "ended": true,
+   "length": 142,
+   "repetition": 0.15714285714285714
+  },
+  {
+   "question": "Explain the difference between a virus and bacteria.",
+   "answer": "A virus is a bacteria that is genetically modified, and can be used to geneticize an individual. The difference is that the virus was first discovered in the United States in 1981 by a team of researchers from the University of Alabama in Houston, USA. They used the virus to create the first flu shot, which was a spark plague with which the virus was killed.",
+   "ended": true,
+   "length": 83,
+   "repetition": 0.012345679012345734
+  },
+  {
+   "question": "What is renewable energy?",
+   "answer": "Eco generation is the technology that will make it more efficient for a long term energy use.  Wind energy generators are a great way to generate electricity, which is a way to clean up the air in the Wind farm.  Wind energy is also a good source of carbon dioxide and other greenhouse gases, which are the main source of climate change.",
+   "ended": true,
+   "length": 71,
+   "repetition": 0.02898550724637683
+  },
+  {
+   "question": "How does the internet work?",
+   "answer": "Internetwork is the internet, or IoT. The internet is a cloud computing system that allows you to control your computer's hardware, software, and software.  You can also use the internet to network and monitor your data.",
+   "ended": true,
+   "length": 51,
+   "repetition": 0.0
+  },
+  {
+   "question": "What were the main causes of World War I?",
+   "answer": "World War I was a serious and complex event that occurred in 1948, when World War II broke out. The main causes of World War I were:\n\n1. The civilian population of the region is largely dependent on weapons and materials.\n2. The military is trained to help with resources for the war, such as food, clothing, and transportation.\n3. The war was hardened by military defeat and anger, which could cause significant damage to the whole country.\n4. The war was won by most countries in the world, with most countries scoring a significant impact on the global stage.\n5. The conflict could also result in the destruction of our nation's land, leading to the extinction of many species of birds.\n6. World War II was the second largest civil war in history, with more than 350 million people killed and 7 million people.\n7. The war is one of the main causes of World War I and has been known",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.04040404040404044
+  },
+  {
+   "question": "Recommend a healthy breakfast.",
+   "answer": "Certain healthy breakfast options, like green vegetables, can help you make healthy snacks. You can do this with your own breweries or family members. One such bite is a cheese pie, which is made from the yogurt and is also a delicious pie.",
+   "ended": true,
+   "length": 63,
+   "repetition": 0.0
+  },
+  {
+   "question": "What is the Pythagorean theorem?",
+   "answer": "The Pythagorean theorem is a mathematical problem that attempts to explain the concept of intrinsic distance, which is an important reason why the Pythagorean theorem is not a accurate formula for this problem. The Pythagorean theorem was proposed by Adam Smith in the early 20th century and has since become widely used in modern science and technology. The problem is augmented with many key areas including: mathematics, science, and philosophy, while the Pythagorean theorem is not a clear indicator of the nature of the theory.\n\nAs for how the Pythagorean theorem works, it is often used as a basis for understanding the nature of human thinking and problem-solving. However, there are some additional factors that could be considered when it comes to understanding the nature of the Pythagorean theorem:\n\n1. The Pythagorean theorem is not a correct",
+   "ended": false,
+   "length": 200,
+   "repetition": 0.23232323232323238
+  }
+ ]
+}
